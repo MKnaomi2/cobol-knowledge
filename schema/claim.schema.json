@@ -1,0 +1,141 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/MKnaomi2/cobol-knowledge/schema/claim.schema.json",
+  "title": "COBOL knowledge claim",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "title",
+    "statement",
+    "kind",
+    "status",
+    "confidence",
+    "topics",
+    "sources",
+    "created",
+    "updated"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "minLength": 3,
+      "maxLength": 80
+    },
+    "title": { "type": "string", "minLength": 8, "maxLength": 160 },
+    "statement": { "type": "string", "minLength": 40, "maxLength": 4000 },
+    "kind": {
+      "type": "string",
+      "enum": ["quantitative", "qualitative", "historical", "operational"]
+    },
+    "status": {
+      "type": "string",
+      "enum": ["proposed", "reviewed", "contested", "withdrawn"]
+    },
+    "confidence": {
+      "type": "string",
+      "enum": ["low", "medium", "high"]
+    },
+    "topics": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string", "minLength": 2 }
+    },
+    "dialects": {
+      "type": "array",
+      "items": { "type": "string" },
+      "default": []
+    },
+    "platforms": {
+      "type": "array",
+      "items": { "type": "string" },
+      "default": []
+    },
+    "values": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["label"],
+        "properties": {
+          "amount": { "type": ["number", "null"] },
+          "unit": { "type": "string" },
+          "label": { "type": "string" },
+          "as_of": { "type": "string" },
+          "range": {
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 2,
+            "items": { "type": "number" }
+          },
+          "notes": { "type": "string" }
+        }
+      }
+    },
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "role"],
+        "properties": {
+          "id": { "type": "string" },
+          "role": {
+            "type": "string",
+            "enum": ["primary", "secondary", "tertiary", "vendor", "news", "attestation", "practitioner"]
+          },
+          "quotes": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        }
+      }
+    },
+    "conflicts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["note"],
+        "properties": {
+          "note": { "type": "string", "minLength": 12 },
+          "source_ids": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        }
+      }
+    },
+    "caveats": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "viral_misuse": { "type": "string" },
+    "reviewers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["github", "date", "verdict"],
+        "properties": {
+          "name": { "type": "string" },
+          "github": { "type": "string" },
+          "date": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" },
+          "verdict": {
+            "type": "string",
+            "enum": ["confirm", "contest", "insufficient"]
+          },
+          "notes": { "type": "string" }
+        }
+      }
+    },
+    "related": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "created": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" },
+    "updated": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" }
+  }
+}

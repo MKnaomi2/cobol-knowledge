@@ -1,0 +1,39 @@
+id: knowledge-not-syntax
+title: The scarce asset is institutional knowledge, not COBOL syntax
+kind: qualitative
+status: proposed
+confidence: medium
+topics: [knowledge-transfer, operations]
+statement: >
+  COBOL syntax is publicly documented (ISO/IEC 1989:2023; vendor
+  language references; the Open Mainframe Project course). What is not
+  public, and what retires with people, is the undocumented business
+  logic and shop practice around specific systems: eligibility rules,
+  batch windows, restart points, JCL folklore, packed-decimal
+  conventions, and why a given program was written the way it was.
+  Teplitzky called this COBOL "folklore." Public teaching materials and
+  defect suites do not substitute for that layer. This ledger exists to
+  hold the *citable* slice of it, not employer source.
+sources:
+  - id: teplitzky-2019-ibm-systems
+    role: practitioner
+  - id: iso-iec-1989-2023
+    role: primary
+  - id: openmainframe-cobol-course
+    role: secondary
+  - id: phasechange-cobol-defects
+    role: secondary
+  - id: verge-unemployment-cobol-2020
+    role: news
+    quotes:
+      - "Over the years, COBOL programmers have aged out of the workforce, forcing states to scramble for fluent coders in times of national crisis."
+caveats:
+  - "This claim is about the *kind* of knowledge at risk, not a count of undocumented systems."
+  - "Syntax being learnable does not imply a given core system is safely editable by a new hire."
+viral_misuse: >
+  The 2026 reel's useful sentence is "This isn’t a technology problem.
+  It’s a knowledge problem." Commenters who reply "COBOL is easy" and
+  commenters who reply "rewrite it in Java" are talking past that sentence.
+related: [university-teaching, retirement-rate, loc-in-production]
+created: "2026-09-01"
+updated: "2026-09-01"

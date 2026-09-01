@@ -1,0 +1,150 @@
+sources:
+  - id: reuters-cobol-blues
+    title: "COBOL blues"
+    url: https://www.reuters.com/graphics/USA-BANKS-COBOL/010040KH18J/index.html
+    year: 2017
+    publisher: Reuters Graphics
+    authors: ["Travis Hartman"]
+    independence: news-secondary
+    method: >
+      Graphic aggregating TIOBE Index, International COBOL Survey Report,
+      IBM, Micro Focus, Celent, and Accenture. Method for each percentage
+      is not shown on the graphic itself.
+    notes: >
+      Widely reused as the source of 43% banking / 80% in-person / 95% ATM
+      / 220 billion lines. Companion article dated 2017-04-10.
+
+  - id: reuters-banks-cobol-2017
+    title: "Banks scramble to fix old systems as IT \"cowboys\" ride into sunset"
+    url: https://www.reuters.com/article/us-usa-banks-cobol-idUSKBN17C0D8/
+    year: 2017
+    publisher: Reuters
+    independence: news-secondary
+    method: News feature; $3 trillion daily commerce figure is stated as an estimate.
+    notes: Companion to the Reuters Graphics piece.
+
+  - id: vanson-bourne-2022
+    title: "Size of COBOL"
+    url: https://www.vansonbourne.com/case-studies/size-of-cobol/
+    year: 2022
+    publisher: Vanson Bourne
+    independence: vendor-commissioned
+    method: >
+      Quantitative interviews, n=1104, 47 countries, COBOL experts / IT
+      decision makers with knowledge of their organization's COBOL use.
+      Commissioned by Micro Focus to replace mid-1990s line-count estimates.
+    notes: >
+      Outcome cited as more than 800 billion lines in production; iTWire
+      reports the scaled range 775–850 billion. Micro Focus's brief included
+      an opportunity to 'own' the COBOL space — treat as vendor-interested.
+
+  - id: itwire-cobol-2022
+    title: "Cobol is still going strong: survey"
+    url: https://itwire.com/business-it-news/business-software/cobol-is-still-going-strong-survey
+    year: 2022
+    publisher: iTWire
+    independence: news-secondary
+    method: Secondary report of the Vanson Bourne / Micro Focus survey.
+    notes: States 775–850 billion lines vs Reuters' 220 billion from five years earlier.
+
+  - id: planet-mainframe-2024
+    title: "COBOL, the incessant number cruncher"
+    url: https://planetmainframe.com/2024/03/cobol-the-incessant-number-cruncher/
+    year: 2024
+    publisher: Planet Mainframe
+    independence: unknown
+    method: Industry commentary compiling Open Mainframe Project and Micro Focus estimates.
+    notes: Contrasts ~250 billion (OMP) vs ~800 billion (Micro Focus/OpenText) vs Gartner 1990s 220 billion.
+
+  - id: techchannel-cobol-survey-2021
+    title: "Special Report: COBOL Survey Results Prove Pervasiveness, Value and a Bright Future"
+    url: https://techchannel.com/cobol/special-report-cobol-survey-results-prove-pervasiveness-value-and-a-bright-future/
+    year: 2021
+    publisher: TechChannel
+    authors: ["Reg Harbeck"]
+    independence: unknown
+    method: Open Mainframe Project COBOL survey extrapolation.
+    notes: Reports 250 billion lines in production use, vs ~240 billion 1990s estimates.
+
+  - id: teplitzky-2019-ibm-systems
+    title: "Closing the COBOL Programming Skills Gap"
+    url: https://web.archive.org/web/20200413033628/https://ibmsystemsmag.com/IBM-Z/10/2019/closing-cobol-programming-skills-gap
+    year: 2019
+    publisher: IBM Systems Media (archived)
+    authors: ["Phil Teplitzky"]
+    independence: practitioner
+    method: >
+      Practitioner essay, not a disclosed survey. States average age 58,
+      ~10% retiring each year, 240 billion lines, 5 billion new lines/year,
+      $3 trillion/day, 84,000 unfilled mainframe positions by 2020.
+    notes: >
+      This is the root of the "10% a year" figure that social posts treat
+      as measured demography. Treat as expert estimate unless a method
+      appendix is found.
+
+  - id: teplitzky-demographic-disaster
+    title: "COBOL: a Demographic Disaster in the Making"
+    url: https://lists.openmainframeproject.org/g/wg-cobol/attachment/113/1/systemsjournalcobolsept172020.pdf
+    year: 2019
+    publisher: Open Mainframe Project COBOL working group list (PDF attachment)
+    authors: ["Phil Teplitzky"]
+    independence: practitioner
+    method: Same demographic claims as the IBM Systems Media essay.
+    notes: PDF circulated on the OMP COBOL working group list.
+
+  - id: verge-unemployment-cobol-2020
+    title: "Unemployment checks are being held up by a coding language almost nobody knows"
+    url: https://www.theverge.com/2020/4/14/21219561/coronavirus-pandemic-unemployment-systems-cobol-legacy-software-infrastructure
+    year: 2020
+    publisher: The Verge
+    independence: news-secondary
+    method: >
+      Verge survey of state unemployment systems; found at least 12 states
+      still using COBOL in some capacity. Repeats Reuters 43%/95% figures.
+    notes: Useful as evidence of public-sector operational dependence, not as a line-count census.
+
+  - id: microfocus-academia-2013
+    title: "Academia needs more support to tackle the IT skills gap"
+    url: http://web.archive.org/web/20160430090312/https://www.microfocus.com/about/press/pressreleases/2013/pr070320131001.aspx
+    year: 2013
+    publisher: Micro Focus
+    independence: vendor
+    method: Vendor press release citing internal and third-party figures.
+    notes: Bundle of marketing statistics (90% Fortune 500, 95% ATM, etc.) without a public microdata file.
+
+  - id: iso-iec-1989-2023
+    title: "ISO/IEC 1989:2023 Information technology — Programming language COBOL"
+    url: https://www.iso.org/standard/74527.html
+    year: 2023
+    publisher: ISO/IEC
+    independence: independent
+    method: International standard. Preview PDF circulated by VDE.
+    notes: Current language standard. Cite, do not paste the text.
+
+  - id: openmainframe-cobol-course
+    title: "COBOL Programming Course"
+    url: https://github.com/openmainframeproject/cobol-programming-course
+    year: 2024
+    publisher: Open Mainframe Project
+    independence: independent
+    method: Public training materials and labs for COBOL on z/OS.
+    notes: Canonical public teaching corpus. Out of scope to duplicate; link it.
+
+  - id: phasechange-cobol-defects
+    title: "cobol-defects-suite (OpenCBS)"
+    url: https://github.com/PhaseChangeSoftware/cobol-defects-suite
+    year: 2024
+    publisher: Phase Change Software
+    independence: unknown
+    method: 43 programs recreated from forum defects (IBMMainframe Experts, Tek-Tips).
+    notes: Public defect corpus for tools and training. Complementary, not a knowledge ledger.
+
+  - id: wired-cobol-asbestos-2026
+    title: "COBOL Is the Asbestos of Programming Languages"
+    url: https://www.wired.com/story/cobol-is-the-asbestos-of-programming-languages/
+    year: 2026
+    publisher: WIRED
+    authors: ["Zeb Larson"]
+    independence: news-secondary
+    method: Feature; cites historical Gartner-era 80%-of-code-by-2000 figure and GDP-cost estimate.
+    notes: Useful historiography; not a primary census.

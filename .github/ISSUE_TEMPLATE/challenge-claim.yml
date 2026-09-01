@@ -1,0 +1,26 @@
+name: Challenge a claim
+description: Contest an existing record with sources
+title: "challenge: "
+labels: ["challenge"]
+body:
+  - type: input
+    id: claim_id
+    attributes:
+      label: Claim id
+      placeholder: loc-in-production
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is wrong
+      description: Misquote, stale year, vendor talking point, bad denominator, etc.
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Counter-sources
+      description: URLs you opened and the sentences that contradict or bound the claim.
+    validations:
+      required: true

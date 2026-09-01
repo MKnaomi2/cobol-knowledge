@@ -1,0 +1,25 @@
+id: in-person-transactions-share
+title: Share of in-person transactions that use COBOL
+kind: quantitative
+status: proposed
+confidence: low
+topics: [payments, installed-base]
+statement: >
+  A 2017 Reuters graphic states that 80 percent of in-person
+  transactions use COBOL. As with the graphic's other percentages, the
+  method and denominator are not shown.
+values:
+  - amount: 80
+    unit: percent
+    label: Reuters Graphics 2017 — "of in-person transactions use COBOL"
+    as_of: "2017"
+sources:
+  - id: reuters-cobol-blues
+    role: news
+    quotes:
+      - "80 percent — Of in-person transactions use COBOL"
+caveats:
+  - "Undefined: POS? cash+card? US or global? acquirer vs issuer?"
+related: [atm-swipe-share, banking-systems-share]
+created: "2026-09-01"
+updated: "2026-09-01"

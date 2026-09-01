@@ -1,0 +1,42 @@
+id: average-programmer-age
+title: Average age of COBOL programmers
+kind: quantitative
+status: contested
+confidence: low
+topics: [workforce, demography]
+statement: >
+  Published age figures for COBOL programmers do not agree. Reuters
+  Graphics (2017) said programmers are most likely to be between 45 and
+  55. Teplitzky (2019) said the average age is 58. Later news features
+  have used "over 60" citing Gartner. Without a shared population
+  definition and year, "the average COBOL programmer is 55 and on a
+  golf course" is rhetoric, not demography.
+values:
+  - amount: 50
+    unit: years
+    label: Reuters 2017 modal band 45–55 (midpoint)
+    as_of: "2017"
+    range: [45, 55]
+  - amount: 58
+    unit: years
+    label: Teplitzky 2019 stated average
+    as_of: "2019"
+sources:
+  - id: reuters-cobol-blues
+    role: news
+    quotes:
+      - "On average, COBOL programmers are most likely to be between 45-55 years old."
+  - id: teplitzky-2019-ibm-systems
+    role: primary
+    quotes:
+      - "The average age of a COBOL programmer is 58"
+conflicts:
+  - note: Modal 45–55 (Reuters 2017) vs mean 58 (Teplitzky 2019) vs "over 60" (Gartner, as quoted in 2020 news). Different years and undefined samples.
+    source_ids: [reuters-cobol-blues, teplitzky-2019-ibm-systems]
+viral_misuse: >
+  The 2026 reel's "55 year old in a golf shirt" is a stock character,
+  not a measurement. Adjacent comments correctly noted 55 is young for
+  this cohort in many shops.
+related: [retirement-rate]
+created: "2026-09-01"
+updated: "2026-09-01"

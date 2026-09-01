@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Open Mainframe Project COBOL course
+    url: https://github.com/openmainframeproject/cobol-programming-course
+    about: Want to *learn COBOL syntax*? That repo, not this one.

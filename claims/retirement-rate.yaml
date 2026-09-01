@@ -1,0 +1,46 @@
+id: retirement-rate
+title: COBOL practitioner annual retirement rate
+kind: quantitative
+status: contested
+confidence: low
+topics: [workforce, demography, viral-statistics]
+statement: >
+  Social posts state that COBOL practitioners are retiring at 10% a
+  year. The traceable root is Phil Teplitzky (2019): "The average age
+  of a COBOL programmer is 58, and roughly 10% are retiring each year."
+  That is a practitioner estimate in an essay, not a disclosed survey
+  or a BLS occupational series for COBOL. BLS publishes programmer
+  employment projections for computer programmers as a whole, not a
+  COBOL-specific retirement rate.
+values:
+  - amount: 10
+    unit: percent-per-year
+    label: Teplitzky 2019 practitioner estimate
+    as_of: "2019"
+    notes: Paired with average age 58 and 84,000 unfilled mainframe positions by 2020
+sources:
+  - id: teplitzky-2019-ibm-systems
+    role: primary
+    quotes:
+      - "The average age of a COBOL programmer is 58, and roughly 10% are retiring each year."
+  - id: teplitzky-demographic-disaster
+    role: primary
+    quotes:
+      - "The average age of a COBOL programmer is 58, and 10% are retiring each year."
+conflicts:
+  - note: >
+      Direction (an aging cohort, thin training pipeline) is widely
+      attested. The 10% rate is repeated as if measured. Gartner has
+      been quoted separately as average age over 60. Reuters 2017 put
+      the modal band at 45–55. These cannot all be the same population
+      in the same year.
+    source_ids: [teplitzky-2019-ibm-systems, reuters-cobol-blues]
+caveats:
+  - "10% of an undefined workforce. Global specialists vs US vs anyone who touches COBOL is not specified."
+  - "The 84,000 unfilled-by-2020 figure in the same essay was a forecast; this catalog has not verified the 2020 outcome."
+viral_misuse: >
+  2026 Instagram reel (maxxrosenblum, Db4r5CpMRCy): "The people who
+  understand it are retiring at 10% a year." Same number, no method.
+related: [average-programmer-age, university-teaching]
+created: "2026-09-01"
+updated: "2026-09-01"

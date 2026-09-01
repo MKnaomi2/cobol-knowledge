@@ -1,0 +1,69 @@
+id: loc-in-production
+title: Lines of COBOL in production
+kind: quantitative
+status: contested
+confidence: low
+topics: [installed-base, market, viral-statistics]
+statement: >
+  There is no public census of COBOL lines in production. Published
+  estimates used as if they were a single fact disagree by more than
+  3×: about 220 billion (Gartner-era figure still cited in 2017 Reuters
+  graphics and 2026 social posts), about 250 billion (Open Mainframe
+  Project 2021 survey extrapolation), and 775–850 billion (Vanson Bourne
+  for Micro Focus, 2022). Treat any one number as an estimate with a
+  method, not as inventory.
+values:
+  - amount: 220000000000
+    unit: lines
+    label: Gartner 1990s figure as reused by Reuters (2017)
+    as_of: "2017"
+    notes: Reuters graphic presents this as "lines of COBOL in use today"
+  - amount: 250000000000
+    unit: lines
+    label: Open Mainframe Project 2021 extrapolation
+    as_of: "2021"
+  - amount: 800000000000
+    unit: lines
+    label: Vanson Bourne / Micro Focus 2022 (midpoint of 775–850B)
+    as_of: "2022"
+    range: [775000000000, 850000000000]
+sources:
+  - id: reuters-cobol-blues
+    role: news
+    quotes:
+      - "220 billion — Lines of COBOL in use today"
+  - id: vanson-bourne-2022
+    role: primary
+    quotes:
+      - "More than 800 Billion lines of code running on production systems and in daily use"
+  - id: itwire-cobol-2022
+    role: secondary
+    quotes:
+      - "The report estimates that 775-850 billion lines of Cobol code are in daily use."
+  - id: techchannel-cobol-survey-2021
+    role: secondary
+    quotes:
+      - "250 billion lines of COBOL in use"
+  - id: planet-mainframe-2024
+    role: secondary
+    quotes:
+      - "Recently, both the Open Mainframe Project and Micro Focus (later OpenText) did, separately. Their estimates were 250 billion and 800 billion respectively."
+      - "The previous estimate, made by Gartner in the 1990s, was 220 billion lines."
+conflicts:
+  - note: >
+      The 220 billion figure is a 1990s estimate still presented as current
+      in 2017 journalism and 2026 social media. Later vendor-commissioned
+      and OMP estimates are much larger and also not a census.
+    source_ids: [reuters-cobol-blues, vanson-bourne-2022, techchannel-cobol-survey-2021]
+caveats:
+  - "No public microdata. Scaling from surveys of COBOL-using orgs is sensitive to market-size assumptions."
+  - "Micro Focus commissioned Vanson Bourne in part to replace the mid-1990s number and to 'own' the COBOL narrative."
+  - "Line counts mix production, cloned, generated, and commented code unless the study says otherwise — these studies do not publish that split."
+viral_misuse: >
+  2026 Instagram reel (maxxrosenblum, Db4r5CpMRCy) states "the global
+  financial system runs on 220 billion lines of COBOL code written in a
+  language from 1959" as settled fact. The language date is right; the
+  line count is the stale Gartner-era number.
+related: [banking-systems-share, atm-swipe-share]
+created: "2026-09-01"
+updated: "2026-09-01"

@@ -1,0 +1,35 @@
+id: atm-swipe-share
+title: Share of ATM swipes that rely on COBOL
+kind: quantitative
+status: proposed
+confidence: low
+topics: [payments, installed-base, viral-statistics]
+statement: >
+  A 2017 Reuters graphic states that 95 percent of ATM swipes rely on
+  COBOL code. Micro Focus marketing has used the same 95% ATM figure
+  since at least 2013. There is no public transaction-level dataset
+  behind the percentage in this catalog.
+values:
+  - amount: 95
+    unit: percent
+    label: Reuters Graphics 2017 — "of ATM swipes rely on COBOL code"
+    as_of: "2017"
+sources:
+  - id: reuters-cobol-blues
+    role: news
+    quotes:
+      - "95 percent — Of ATM swipes rely on COBOL code"
+  - id: microfocus-academia-2013
+    role: vendor
+    quotes:
+      - "95% of all ATM transactions use COBOL"
+  - id: verge-unemployment-cobol-2020
+    role: secondary
+    quotes:
+      - "95 percent of ATM swipes still rely on the language"
+caveats:
+  - "Likely counts authorizations that touch a COBOL-based issuer/host, not the ATM client software language."
+  - "2013 vendor press release already carried 95%. Reuters 2017 may be repeating a vendor talking point."
+related: [banking-systems-share, in-person-transactions-share, daily-commerce-volume]
+created: "2026-09-01"
+updated: "2026-09-01"

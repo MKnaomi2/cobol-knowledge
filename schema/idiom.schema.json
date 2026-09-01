@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/MKnaomi2/cobol-knowledge/schema/idiom.schema.json",
+  "title": "COBOL practitioner idiom",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "title",
+    "statement",
+    "status",
+    "dialects",
+    "platforms",
+    "attestation",
+    "created",
+    "updated"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "title": { "type": "string", "minLength": 8 },
+    "statement": { "type": "string", "minLength": 40 },
+    "status": {
+      "type": "string",
+      "enum": ["proposed", "reviewed", "contested", "withdrawn"]
+    },
+    "dialects": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string" }
+    },
+    "platforms": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string" }
+    },
+    "example": { "type": "string" },
+    "counterexample": { "type": "string" },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "role"],
+        "properties": {
+          "id": { "type": "string" },
+          "role": { "type": "string" }
+        }
+      }
+    },
+    "attestation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["github", "role", "years_approx"],
+      "properties": {
+        "github": { "type": "string" },
+        "role": { "type": "string" },
+        "years_approx": { "type": "integer", "minimum": 1, "maximum": 60 },
+        "employer_named": { "type": "boolean" },
+        "notes": { "type": "string" }
+      }
+    },
+    "reviewers": { "type": "array" },
+    "created": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" },
+    "updated": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" }
+  }
+}

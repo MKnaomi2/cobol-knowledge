@@ -1,0 +1,38 @@
+id: university-teaching
+title: Universities largely stopped teaching COBOL
+kind: qualitative
+status: proposed
+confidence: medium
+topics: [education, workforce]
+statement: >
+  Computer science programs in the US largely dropped COBOL from
+  undergraduate curricula in the 1980s–1990s. That directional claim is
+  repeated by practitioners, vendors, and journalists and matches the
+  visible course catalogs of major CS departments. Quantitative claims
+  such as "85% of universities dropped COBOL" are not yet tied in this
+  catalog to a named survey with n, year, and population. Public
+  teaching did not go to zero: the Open Mainframe Project COBOL
+  Programming Course is an active, lab-based exception.
+sources:
+  - id: teplitzky-2019-ibm-systems
+    role: practitioner
+    quotes:
+      - "Very few schools still teach programming and even fewer teach COBOL"
+  - id: microfocus-academia-2013
+    role: vendor
+    quotes:
+      - "showing a worrying disparity between the university courses being offered and the skills required by commercial organizations"
+  - id: openmainframe-cobol-course
+    role: primary
+    quotes:
+      - "Training materials and labs for a \"Getting Started\" level course on COBOL"
+caveats:
+  - "Absence from elite CS departments is not the same as absence from community colleges, bootcamps, or vendor training."
+  - "Do not cite an 85% figure here until a primary is added."
+viral_misuse: >
+  2026 reel: "Universities stopped teaching it decades ago." Directionally
+  fair; absolute "stopped" overstates remaining OMP / IBM / community-college
+  channels.
+related: [retirement-rate]
+created: "2026-09-01"
+updated: "2026-09-01"

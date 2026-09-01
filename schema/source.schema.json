@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/MKnaomi2/cobol-knowledge/schema/source.schema.json",
+  "title": "COBOL knowledge source catalog",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["sources"],
+  "properties": {
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "title", "url", "year", "publisher", "independence"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+          },
+          "title": { "type": "string", "minLength": 8 },
+          "url": {
+            "type": "string",
+            "pattern": "^https?://.+"
+          },
+          "year": { "type": "integer", "minimum": 1959, "maximum": 2100 },
+          "publisher": { "type": "string" },
+          "authors": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "independence": {
+            "type": "string",
+            "enum": [
+              "independent",
+              "vendor-commissioned",
+              "vendor",
+              "news-secondary",
+              "practitioner",
+              "unknown"
+            ]
+          },
+          "method": { "type": "string" },
+          "notes": { "type": "string" }
+        }
+      }
+    }
+  }
+}

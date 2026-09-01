@@ -1,0 +1,32 @@
+id: daily-commerce-volume
+title: Daily commerce processed through COBOL systems
+kind: quantitative
+status: proposed
+confidence: low
+topics: [payments, market]
+statement: >
+  Reuters (2017) reported that an estimated $3 trillion in daily
+  commerce flows through COBOL systems in financial services. Phil
+  Teplitzky (2019) used the same $3 trillion/day figure. This catalog
+  does not yet have a primary calculation (which networks, which
+  geographies, gross vs net).
+values:
+  - amount: 3000000000000
+    unit: USD-per-day
+    label: Reuters 2017 estimate
+    as_of: "2017"
+sources:
+  - id: reuters-banks-cobol-2017
+    role: news
+    quotes:
+      - "an estimated $3 trillion in daily commerce flows through COBOL systems"
+  - id: teplitzky-2019-ibm-systems
+    role: secondary
+    quotes:
+      - "$3 trillion of commercial transactions are processed by COBOL applications each day"
+caveats:
+  - "Card networks plus ACH plus wires plus core-ledger postings are easy to double-count."
+  - "A 2017 estimate should not be quoted as a 2026 measurement without a new source."
+related: [atm-swipe-share, loc-in-production]
+created: "2026-09-01"
+updated: "2026-09-01"

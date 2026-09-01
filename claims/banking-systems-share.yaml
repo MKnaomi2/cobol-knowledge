@@ -1,0 +1,35 @@
+id: banking-systems-share
+title: Share of banking systems built on COBOL
+kind: quantitative
+status: proposed
+confidence: low
+topics: [banking, installed-base, viral-statistics]
+statement: >
+  A 2017 Reuters graphic states that 43 percent of banking systems are
+  built on COBOL. The graphic attributes its numbers as a bundle to
+  TIOBE, an International COBOL Survey Report, IBM, Micro Focus, Celent,
+  and Accenture. No method, year-of-survey, or population is shown on
+  the graphic. Later pieces repeat 43% as if it were a current census.
+values:
+  - amount: 43
+    unit: percent
+    label: Reuters Graphics 2017 — "of banking systems are built on COBOL"
+    as_of: "2017"
+sources:
+  - id: reuters-cobol-blues
+    role: news
+    quotes:
+      - "43 percent — Of banking systems are built on COBOL"
+  - id: verge-unemployment-cobol-2020
+    role: secondary
+    quotes:
+      - "According to Reuters, 43 percent of banking systems are built on COBOL"
+caveats:
+  - "Undefined denominator: systems? applications? MIPS? banks? US only?"
+  - "Vendor-adjacent sources in the Reuters bundle. Treat as a 2017 journalistic figure until a primary with method is catalogued."
+viral_misuse: >
+  Repeated in 2020–2026 explainers as a present-tense fact without
+  restating the 2017 Reuters graphic as the source.
+related: [atm-swipe-share, in-person-transactions-share, loc-in-production]
+created: "2026-09-01"
+updated: "2026-09-01"

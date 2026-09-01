@@ -1,0 +1,49 @@
+name: New claim
+description: Propose a sourced COBOL knowledge record
+title: "claim: "
+labels: ["claim"]
+body:
+  - type: input
+    id: claim_id
+    attributes:
+      label: Proposed id (kebab-case)
+      placeholder: packed-decimal-scale
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Kind
+      options:
+        - quantitative
+        - qualitative
+        - historical
+        - operational
+    validations:
+      required: true
+  - type: textarea
+    id: statement
+    attributes:
+      label: Statement
+      description: One paragraph. No unsourced numbers.
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources
+      description: URLs you opened, with the sentence that supports the statement.
+    validations:
+      required: true
+  - type: textarea
+    id: conflicts
+    attributes:
+      label: Known conflicts
+      description: Who disagrees, and by how much?
+  - type: checkboxes
+    id: legal
+    attributes:
+      label: Legal
+      options:
+        - label: This is not employer source, a vendor manual paste, or private data.
+          required: true
