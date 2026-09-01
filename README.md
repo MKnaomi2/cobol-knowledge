@@ -1,12 +1,12 @@
 # COBOL Knowledge
 
-**Peer-reviewed, data-backed COBOL knowledge — not another tutorial.**
+**A sourced COBOL claim ledger. Not peer-reviewed. Not a dataset.**
 
-Viral posts still say the global financial system runs on *220 billion lines of COBOL*, that practitioners retire at *10% a year*, and that *nobody has a plan*. Those sentences are directionally serious. They are not a dataset.
+Viral posts still say the global financial system runs on *220 billion lines of COBOL*, that practitioners retire at *10% a year*, and that *nobody has a plan*. Those sentences are directionally serious. They are not measurements this repo can vouch for.
 
-This repository is the plan that can exist in public: a **claim ledger**. Every number, operational fact, and shop practice is a record with sources, conflicts, confidence, and review status. Contested claims stay visible. Unsourced claims cannot be marked reviewed.
+This repository is a **claim ledger**: statements with citations, conflicts, and an explicit review status. Right now every seed claim is `proposed` or `contested`. Zero are `reviewed`. Citing a 2017 Reuters graphic or a 2019 practitioner essay is not the same as having data, and opening a pull request is not peer review.
 
-> Existing public work already covers *teaching COBOL* ([Open Mainframe Project course](https://github.com/openmainframeproject/cobol-programming-course)), *compilers/parsers*, and a *defect suite*. This project does not replace them. It stores **what is actually known**, how we know it, and where the folklore diverges from the evidence.
+> Existing public work already covers *teaching COBOL* ([Open Mainframe Project course](https://github.com/openmainframeproject/cobol-programming-course)), *compilers/parsers*, and a *defect suite*. This project does not replace them. It stores **cited claims**, including ones that do not hold up, and refuses to relabel citations as data or a PR as peer review.
 
 ## Why this exists
 
