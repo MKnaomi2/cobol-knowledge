@@ -40,9 +40,11 @@ Browse:
 - [`schema/`](schema/) — machine-checkable shapes
 - [`idioms/`](idioms/) — practitioner patterns (empty until attested)
 
-## Status of the seed
+## Status
 
-The seed claims in this first commit are **proposed or contested**, not peer-reviewed. They exist so the process has something real to chew on: conflicting line-count estimates, ATM/banking share figures that trace to a 2017 Reuters graphic, and the 10%/year retirement rate that traces to Phil Teplitzky (2019), not a BLS series.
+47 claim files. Status is `proposed` or `contested`. **Zero are `reviewed`.**
+
+Most records are language/runtime facts cited from IBM Enterprise COBOL docs, GnuCOBOL manuals, NBS Handbook 113, and public IBM PDFs (JCL, CICS, IMS). A leftover handful of viral market statistics remain marked `contested`/`proposed` with low confidence so they are not repeated as measurements.
 
 CI will fail a PR that:
 
