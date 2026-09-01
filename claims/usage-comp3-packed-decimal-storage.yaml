@@ -1,0 +1,36 @@
+id: usage-comp3-packed-decimal-storage
+title: COMP-3 is PACKED-DECIMAL; two digits per byte except the sign nibble
+kind: operational
+status: proposed
+confidence: high
+topics: [data, dialect]
+statement: >
+  In Enterprise COBOL for z/OS, PACKED-DECIMAL and COMP-3 are synonyms
+  for internal decimal items. Packed-decimal items occupy 1 byte of
+  storage for every two decimal digits coded in the PICTURE description,
+  except that the rightmost byte contains only one digit and the sign.
+  The format is most efficient when an odd number of digits is coded so
+  the leftmost byte is fully used. Packed-decimal items are handled as
+  fixed-point numbers for arithmetic purposes.
+sources:
+  - id: ibm-cobol-zos-64-numeric-formats
+    locator: Packed-decimal (COMP-3) items
+    quotes:
+      - "PACKED-DECIMAL and COMP-3 are synonyms."
+      - "Packed-decimal items occupy 1 byte of storage for every two decimal digits you code in the PICTURE description, except that the rightmost byte contains only one digit and the sign."
+      - "This format is most efficient when you code an odd number of digits in the PICTURE description, so that the leftmost byte is fully used."
+      - "Packed-decimal items are handled as fixed-point numbers for arithmetic purposes."
+    paraphrase: false
+    role: primary
+  - id: ibm-cobol-zos-64-computational-items
+    locator: COMPUTATIONAL-3 or COMP-3 (internal decimal)
+    quotes:
+      - "This is the equivalent of PACKED-DECIMAL."
+      - "Specified for internal decimal items. Such an item appears in storage in packed decimal format. There are two digits for each character position, except for the trailing character position, which is occupied by the low-order digit and the sign."
+    paraphrase: false
+    role: secondary
+caveats:
+  - The pages describe storage layout and arithmetic class (fixed-point). They do not state a TRUNC-style truncation rule for packed-decimal; TRUNC applies to BINARY/COMP/COMP-4.
+created: "2026-09-01"
+updated: "2026-09-01"
+related: [picture-numeric-symbols-9-p-s-v, usage-binary-comp-comp4-synonyms]

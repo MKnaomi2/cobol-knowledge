@@ -1,0 +1,32 @@
+id: perform-inline-omits-procedure-name
+title: Inline PERFORM omits procedure-name-1 and requires END-PERFORM
+kind: operational
+status: proposed
+confidence: high
+topics: [syntax]
+statement: >
+  The PERFORM statement transfers control explicitly to one or more
+  procedures and implicitly returns control to the next executable
+  statement after those procedures complete, or it controls execution
+  of imperative statements within its own scope. The statement is an
+  inline PERFORM when procedure-name-1 is omitted, and an out-of-line
+  PERFORM when procedure-name-1 is specified. If procedure-name-1 is
+  specified, imperative-statement-1 and END-PERFORM must not be
+  specified. If procedure-name-1 is omitted, imperative-statement-1 and
+  END-PERFORM must be specified. An inline PERFORM must be delimited by
+  END-PERFORM. The inline and out-of-line formats cannot be combined.
+  EXIT PERFORM can exit an inline PERFORM without GO TO.
+sources:
+  - id: ibm-cobol-zos-64-perform-statement
+    locator: PERFORM statement
+    quotes:
+      - "The PERFORM statement is an inline PERFORM statement, when procedure-name-1 is omitted."
+      - "The PERFORM statement is an out-of-line PERFORM statement, when procedure-name-1 is specified."
+      - "If procedure-name-1 is specified, imperative-statement-1 and the END-PERFORM phrase must not be specified."
+      - "If procedure-name-1 is omitted, imperative-statement-1 and the END-PERFORM phrase must be specified."
+      - "An inline PERFORM must be delimited by the END-PERFORM phrase."
+    paraphrase: false
+    role: primary
+created: "2026-09-01"
+updated: "2026-09-01"
+related: [goback-stop-run-exit-program]

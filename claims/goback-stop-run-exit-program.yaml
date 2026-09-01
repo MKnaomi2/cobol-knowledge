@@ -1,0 +1,37 @@
+id: goback-stop-run-exit-program
+title: EXIT PROGRAM, STOP RUN, and GOBACK terminate differently
+kind: operational
+status: proposed
+confidence: high
+topics: [runtime, syntax]
+statement: >
+  In Enterprise COBOL for z/OS, EXIT PROGRAM in a main program takes no
+  action; in a subprogram it returns to the calling program without
+  ending the run unit. An implicit EXIT PROGRAM is generated if a called
+  program has no next executable statement. STOP RUN in a main program
+  returns to the caller (which might be the operating system) and
+  terminates the run unit, deleting all dynamically called programs in
+  the run unit and all programs link-edited with them. STOP RUN in a
+  subprogram returns directly to the program that called the main
+  program and likewise terminates the run unit. GOBACK in a main program
+  returns to the caller, terminates the run unit, and deletes dynamically
+  called programs (it does not delete the main program); in a threaded
+  environment the thread is terminated. A subprogram left with EXIT
+  PROGRAM or GOBACK is usually left in last-used state; the next call
+  finds internal values as they were left, except that return points for
+  PERFORMed paragraphs and sections are reset to their initial values.
+sources:
+  - id: ibm-cobol-zos-64-ending-reentering
+    locator: Termination statement table
+    quotes:
+      - "EXIT PROGRAM | Main program | No action taken"
+      - "STOP RUN terminates the run unit (also called an enclave in Language Environment terms), and deletes all dynamically called programs in the run unit and all programs link-edited with them."
+      - "GOBACK terminates the run unit, and deletes all dynamically called programs in the run unit and all programs link-edited with them. (It does not delete the main program.)"
+      - "A subprogram is usually left in its last-used state when it terminates with EXIT PROGRAM or GOBACK."
+    paraphrase: false
+    role: primary
+caveats:
+  - Threaded-environment extra rules (thread not terminated on EXIT PROGRAM unless first in the thread) are stated on the same page and are not restated here in full.
+created: "2026-09-01"
+updated: "2026-09-01"
+related: [perform-inline-omits-procedure-name, gnucobol-goback-main-stop-run-sub-exit]

@@ -1,0 +1,33 @@
+id: level-88-condition-name-value
+title: Level-88 entries name values of a preceding conditional variable
+kind: operational
+status: proposed
+confidence: high
+topics: [syntax, data]
+statement: >
+  Format 2 of the VALUE clause associates a value, values, or ranges of
+  values with a condition-name. Each such condition-name requires a
+  separate level-88 entry. The VALUE clause is required in a
+  condition-name entry and must be the only clause in the entry. Every
+  level-88 entry must be preceded either by the entry for the
+  conditional variable or by another level-88 entry when several
+  condition-names apply to one variable. Each level-88 entry implicitly
+  has the PICTURE characteristics of the conditional variable. THROUGH
+  and THRU are equivalent. When THROUGH is used, literal-1 must be less
+  than literal-2.
+sources:
+  - id: ibm-cobol-zos-63-condition-name-value
+    locator: Format 2 condition-name value
+    quotes:
+      - "This format associates a value, values, or ranges of values with a condition-name. Each such condition-name requires a separate level-88 entry."
+      - "The VALUE clause is required in a condition-name entry, and must be the only clause in the entry."
+      - "Thus every level-88 entry must always be preceded either by the entry for the conditional variable or by another level-88 entry when several condition-names apply to one conditional variable."
+      - "Each such level-88 entry implicitly has the PICTURE characteristics of the conditional variable."
+      - "The keywords THROUGH and THRU are equivalent."
+    paraphrase: false
+    role: primary
+caveats:
+  - Cited from Enterprise COBOL for z/OS 6.3 Language Reference Format 2; 6.4 was not opened for this topic.
+created: "2026-09-01"
+updated: "2026-09-01"
+related: [evaluate-shorthand-nested-if]

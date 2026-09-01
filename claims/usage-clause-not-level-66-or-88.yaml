@@ -1,0 +1,32 @@
+id: usage-clause-not-level-66-or-88
+title: USAGE may be specified at any level except 66 or 88
+kind: operational
+status: proposed
+confidence: high
+topics: [syntax, data]
+statement: >
+  The USAGE clause specifies the format in which data is represented in
+  storage. It can be specified for a data description entry with any
+  level-number other than 66 or 88. When specified at the group level,
+  USAGE applies to each elementary item in the group. The usage of
+  elementary items must not contradict the usage of a group to which
+  they belong. When USAGE is not specified at either the group or
+  elementary level, DISPLAY is implied when the PICTURE contains only
+  symbols other than G or N; NATIONAL is implied when the PICTURE
+  contains only N and NSYMBOL(NATIONAL) is in effect; DISPLAY-1 is
+  implied when the PICTURE contains one or more N and NSYMBOL(DBCS)
+  is in effect. NATIVE is treated as a comment in all USAGE phrases
+  for which NATIVE is shown.
+sources:
+  - id: ibm-cobol-zos-64-usage-clause
+    locator: USAGE clause
+    quotes:
+      - "The USAGE clause specifies the format in which data is represented in storage."
+      - "The USAGE clause can be specified for a data description entry with any level-number other than 66 or 88."
+      - "When specified at the group level, the USAGE clause applies to each elementary item in the group."
+      - "NATIVE is treated as a comment in all phrases for which NATIVE is shown in the USAGE clause."
+    paraphrase: false
+    role: primary
+created: "2026-09-01"
+updated: "2026-09-01"
+related: [usage-binary-comp-comp4-synonyms, usage-comp3-packed-decimal-storage, usage-pointer-4-or-8-bytes]

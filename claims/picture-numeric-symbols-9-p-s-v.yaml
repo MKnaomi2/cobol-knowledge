@@ -1,0 +1,25 @@
+id: picture-numeric-symbols-9-p-s-v
+title: Numeric PICTURE strings use only 9, P, S, and V
+kind: operational
+status: proposed
+confidence: high
+topics: [syntax, data]
+statement: >
+  For all numeric fields in Enterprise COBOL for z/OS, the PICTURE
+  character-string can contain only the symbols 9, P, S, and V. S can
+  be written only as the leftmost character. V can be written only once
+  in a given PICTURE character-string.
+sources:
+  - id: ibm-cobol-zos-64-picture-categories
+    locator: Numeric items
+    quotes:
+      - "For all numeric fields, the PICTURE character-string can contain only the symbols 9, P, S, and V."
+      - "The symbol S can be written only as the leftmost character in the PICTURE character-string."
+      - "The symbol V can be written only once in a given PICTURE character-string."
+    paraphrase: false
+    role: primary
+caveats:
+  - Category internal floating point is defined by USAGE COMP-1 or COMP-2, not by a numeric PICTURE string.
+created: "2026-09-01"
+updated: "2026-09-01"
+related: [picture-clause-elementary-required, usage-comp3-packed-decimal-storage]

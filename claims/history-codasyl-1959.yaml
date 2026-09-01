@@ -1,0 +1,29 @@
+id: history-codasyl-1959
+title: COBOL began as a CODASYL Short Range Committee specification in 1959-1960
+kind: historical
+status: proposed
+confidence: high
+topics: [history]
+statement: >
+  NBS Handbook 113 (June 1973) records that on April 8, 1959 a small group
+  of computer users and manufacturers met at the University of Pennsylvania
+  and concluded that specifications for a machine-independent common language
+  for business problems might be feasible. On May 28-29, 1959 more than 40
+  representatives met at the Pentagon and agreed both that the work was
+  desirable and that CODASYL should be formed. Three committees were created;
+  the Short Range Committee developed the initial specifications for a Common
+  Business Oriented Language (COBOL). A COBOL Maintenance Committee was
+  organized in 1960.
+sources:
+  - id: nbs-handbook-113-1973
+    role: primary
+    locator: "1.2 Background and History"
+    paraphrase: false
+    quotes:
+      - "On April 8, 1959, a small group of computer users and manufacturers, meeting at the University of Pennsylvania to review recent language developments in the area of business applications, concluded that the development of specifications for a machine independent common language for business problems might be feasible."
+      - "On May 28 and 29, 1959, over 40 representatives from users in private industry and in government, computer manufacturers, and other interested parties, met at the Pentagon."
+      - "The Short Range Committee, although initially assigned the task of studying existing business compilers and the experience of users of these compilers, developed the initial specifications for a Common Business Oriented Language (COBOL)."
+caveats:
+  - This is committee chronology, not a claim that Grace Hopper personally invented COBOL. Hopper's role is a separate claim and is not asserted here.
+created: "2026-09-01"
+updated: "2026-09-01"

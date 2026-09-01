@@ -1,0 +1,42 @@
+id: json-generate-from-cobol-data
+title: JSON GENERATE produces JSON text from COBOL data items
+kind: operational
+status: proposed
+confidence: high
+topics: [syntax, data]
+statement: >
+  Enterprise COBOL can express COBOL data items as JSON text with JSON
+  GENERATE, which identifies the source and output data items. Optional
+  phrases include a count of characters generated, encoding, alternative
+  names (NAME), items to exclude (SUPPRESS), and conversion to JSON
+  BOOLEAN pairs. identifier-1 is the receiving area and must be an
+  elementary alphanumeric or national item or an alphanumeric or
+  national group. A national group identifier-1 is processed as an
+  elementary national item; an alphanumeric group is treated as an
+  elementary alphanumeric item. identifier-1 must be large enough to
+  contain the generated JSON text. No extra white space is inserted.
+  If identifier-1 is longer than the generated JSON, only the generated
+  part is changed. After execution, JSON-CODE contains zero or a
+  nonzero exception code.
+sources:
+  - id: ibm-cobol-zos-63-json-generate
+    locator: JSON GENERATE statement
+    quotes:
+      - "The receiving area for the generated JSON text."
+      - "identifier-1 must reference one of the following items: An elementary data item of category alphanumeric; An alphanumeric group item; An elementary data item of category national; A national group item"
+      - "identifier-1 must be large enough to contain the generated JSON text."
+    paraphrase: false
+    role: primary
+  - id: ibm-cobol-zos-64-json-generate-operation
+    locator: Operation of JSON GENERATE
+    quotes:
+      - "No extra white space (new lines, indentation, and so forth) is inserted to make the generated JSON text more readable."
+      - "If identifier-1 is longer than the generated JSON text, only that part of identifier-1 in which JSON is generated is changed."
+      - "After execution of the JSON GENERATE statement, special register JSON-CODE contains either zero, which indicates successful completion, or a nonzero exception code."
+    paraphrase: false
+    role: secondary
+caveats:
+  - JSON GENERATE/PARSE are restricted under LP(64); the LP page states programs compiled with LP(64) cannot contain JSON GENERATE or JSON PARSE statements.
+created: "2026-09-01"
+updated: "2026-09-01"
+related: [xml-parse-to-processing-procedure, lp-option-amode-31-or-64]

@@ -1,0 +1,36 @@
+id: usage-binary-comp-comp4-synonyms
+title: BINARY, COMP, and COMP-4 are synonyms occupying 2, 4, or 8 bytes
+kind: operational
+status: proposed
+confidence: high
+topics: [data, dialect]
+statement: >
+  In Enterprise COBOL for z/OS, BINARY, COMP, and COMP-4 are synonyms.
+  Binary-format numbers occupy 2, 4, or 8 bytes of storage. If the
+  PICTURE clause specifies that an item is signed, the leftmost bit is
+  used as the operational sign. A binary number with a PICTURE description
+  of four or fewer decimal digits occupies 2 bytes; five to nine decimal
+  digits, 4 bytes; and 10 to 18 decimal digits, 8 bytes. TRUNC(STD|OPT|BIN)
+  controls how BINARY, COMP, or COMP-4 data is truncated.
+sources:
+  - id: ibm-cobol-zos-64-numeric-formats
+    locator: Binary (COMP) items
+    quotes:
+      - "BINARY, COMP, and COMP-4 are synonyms."
+      - "Binary-format numbers occupy 2, 4, or 8 bytes of storage."
+      - "If the PICTURE clause specifies that an item is signed, the leftmost bit is used as the operational sign."
+      - "A binary number with a PICTURE description of four or fewer decimal digits occupies 2 bytes; five to nine decimal digits, 4 bytes; and 10 to 18 decimal digits, 8 bytes."
+      - "Use the TRUNC(STD|OPT|BIN) compiler option to indicate how binary data (BINARY, COMP, or COMP-4) is to be truncated."
+    paraphrase: false
+    role: primary
+  - id: ibm-cobol-zos-64-computational-items
+    locator: COMPUTATIONAL-4 or COMP-4 (binary)
+    quotes:
+      - "This is the equivalent of BINARY."
+    paraphrase: false
+    role: secondary
+caveats:
+  - COMP-5 is native binary and is not a synonym of BINARY/COMP/COMP-4.
+created: "2026-09-01"
+updated: "2026-09-01"
+related: [usage-comp5-native-binary-range, trunc-std-picture-digits]

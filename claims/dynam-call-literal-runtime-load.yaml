@@ -1,0 +1,30 @@
+id: dynam-call-literal-runtime-load
+title: DYNAM loads CALL literal targets at run time; default is NODYNAM
+kind: operational
+status: proposed
+confidence: high
+topics: [runtime]
+statement: >
+  Use DYNAM to cause nonnested, separately compiled programs invoked
+  through the CALL literal statement to be loaded for CALL, and deleted
+  for CANCEL, dynamically at run time. Default is NODYNAM. CALL
+  identifier statements always result in a runtime load of the target
+  program and are not affected by this option. DYNAM must not be used
+  for COBOL programs processed by the CICS translator or the CICS
+  compiler option, or for COBOL programs that have EXEC SQL statements
+  and run under CICS or Db2 CAF. Programs that call DLLs must use
+  NODYNAM and DLL instead of DYNAM. DYNAM can be overridden for
+  particular CALL statements by the CALLINTERFACE directive.
+sources:
+  - id: ibm-cobol-zos-64-dynam
+    locator: DYNAM
+    quotes:
+      - "Use DYNAM to cause nonnested, separately compiled programs invoked through the CALL literal statement to be loaded for CALL, and deleted for CANCEL, dynamically at run time."
+      - "Default is: NODYNAM"
+      - "CALL identifier statements always result in a runtime load of the target program and are not affected by this option."
+      - "The DYNAM compiler option must not be used in the following cases: COBOL programs that are processed by the CICS translator or the CICS compiler option"
+    paraphrase: false
+    role: primary
+created: "2026-09-01"
+updated: "2026-09-01"
+related: [rent-reentrant-object-default]

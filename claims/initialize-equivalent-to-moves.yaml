@@ -1,0 +1,44 @@
+id: initialize-equivalent-to-moves
+title: INITIALIZE is functionally equivalent to one or more MOVE statements
+kind: operational
+status: proposed
+confidence: high
+topics: [syntax, data]
+statement: >
+  An INITIALIZE statement is functionally equivalent to one or more
+  MOVE statements. Applied to a group item, it initializes subordinate
+  elementary items by category. If REPLACING is not coded, SPACE is the
+  implied sending item for alphabetic, alphanumeric, alphanumeric-edited,
+  DBCS, category national, and national-edited receiving items, and ZERO
+  is the implied sending item for numeric and numeric-edited receiving
+  items. When FILLER is specified, receiving elementary items that have
+  an explicit or implicit FILLER clause are initialized. When an
+  alphanumeric or national group is INITIALIZEd, it is processed with
+  group semantics and the elementary items within the group are
+  recognized and processed.
+sources:
+  - id: ibm-cobol-zos-64-initialize-examples
+    locator: Examples initializing data items
+    quotes:
+      - "An INITIALIZE statement is functionally equivalent to one or more MOVE statements."
+    paraphrase: false
+    role: primary
+  - id: ibm-cobol-zos-64-initialize-structure
+    locator: Initializing a structure
+    quotes:
+      - "SPACE is the implied sending item for alphabetic, alphanumeric, alphanumeric-edited, DBCS, category national, and national-edited receiving items."
+      - "ZERO is the implied sending item for numeric and numeric-edited receiving items."
+      - "When you use an INITIALIZE statement to initialize an alphanumeric or national group data item, the data item is processed as a group item, that is, with group semantics."
+    paraphrase: false
+    role: secondary
+  - id: ibm-cobol-zos-65-initialize-statement
+    locator: FILLER phrase
+    quotes:
+      - "When the FILLER phrase is specified, the receiving elementary data items that have an explicit or implicit FILLER clause will be initialized."
+    paraphrase: false
+    role: secondary
+caveats:
+  - INITIALIZE statement rules also exclude FILLER (unless FILLER is specified), items subordinate through REDEFINES/RENAMES, and other receivers that are not valid MOVE targets; those exclusion rules are not restated here in full.
+created: "2026-09-01"
+updated: "2026-09-01"
+related: [corresponding-same-name-elementary]

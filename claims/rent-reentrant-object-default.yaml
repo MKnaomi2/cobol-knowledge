@@ -1,0 +1,30 @@
+id: rent-reentrant-object-default
+title: RENT (the default) generates a reentrant object program
+kind: operational
+status: proposed
+confidence: high
+topics: [runtime]
+statement: >
+  A program compiled as RENT is generated as a reentrant object program.
+  A program compiled as NORENT is generated as a nonreentrant object
+  program. Either can be invoked as a main program or as a subprogram.
+  Default is RENT. Compile programs with RENT if they will be run in
+  virtual storage addresses above 16 MB. Execution of nonreentrant
+  programs above 16 MB is not supported. Programs compiled with NORENT
+  must be RMODE 24. The LP(64) compiler option implies RENT; if the
+  user explicitly specifies NORENT, an informational message is issued
+  and the setting is ignored.
+sources:
+  - id: ibm-cobol-zos-64-rent
+    locator: RENT
+    quotes:
+      - "A program compiled as RENT is generated as a reentrant object program."
+      - "A program compiled as NORENT is generated as a nonreentrant object program."
+      - "Default is: RENT"
+      - "Compile programs with RENT if they will be run in virtual storage addresses above 16 MB."
+      - "Programs compiled with NORENT must be RMODE 24."
+    paraphrase: false
+    role: primary
+created: "2026-09-01"
+updated: "2026-09-01"
+related: [lp-option-amode-31-or-64, dynam-call-literal-runtime-load]

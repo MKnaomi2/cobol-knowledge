@@ -1,0 +1,25 @@
+id: picture-character-string-max-50
+title: A PICTURE character-string is at most 50 characters
+kind: operational
+status: proposed
+confidence: high
+topics: [syntax, data]
+statement: >
+  In Enterprise COBOL for z/OS, a PICTURE character-string is made up of
+  COBOL characters used as picture symbols. The allowable combinations
+  determine the category of the elementary data item. The character-string
+  can contain a maximum of 50 characters.
+sources:
+  - id: ibm-cobol-zos-64-picture-clause
+    locator: character-string
+    quotes:
+      - "character-string is made up of certain COBOL characters used as picture symbols."
+      - "The allowable combinations determine the category of the elementary data item."
+      - "character-string can contain a maximum of 50 characters."
+    paraphrase: false
+    role: primary
+caveats:
+  - BYTE-LENGTH integer-1 is a separate PICTURE phrase allowed only for UTF-8 (U) items; that phrase is not this 50-character limit.
+created: "2026-09-01"
+updated: "2026-09-01"
+related: [picture-clause-elementary-required]

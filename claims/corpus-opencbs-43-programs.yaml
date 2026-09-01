@@ -1,0 +1,24 @@
+id: corpus-opencbs-43-programs
+title: OpenCBS is a 43-program COBOL defect suite from public forums
+kind: qualitative
+status: proposed
+confidence: medium
+topics: [corpus, defects]
+statement: >
+  The OpenCBS paper and Phase Change Software GitHub suite describe 43 COBOL
+  programs recreated from developer questions on IBMMainframe Experts and
+  Tek-Tips forums. The suite is a public defect benchmark for tools and
+  training. It is not a sample of production bank source and does not
+  capture undocumented shop folklore.
+sources:
+  - id: arxiv-opencbs-2022
+    role: primary
+  - id: phasechange-cobol-defects
+    role: secondary
+    quotes:
+      - "This repository contains 43 COBOL programs recreated from actual developer questions posted in COBOL/mainframe forums."
+caveats:
+  - Forum-reconstructed defects skew toward beginner errors (assignment, algorithm), not eligibility-rule archaeology.
+created: "2026-09-01"
+updated: "2026-09-01"
+related: [knowledge-not-syntax]

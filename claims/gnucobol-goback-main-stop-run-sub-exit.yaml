@@ -1,0 +1,38 @@
+id: gnucobol-goback-main-stop-run-sub-exit
+title: In GnuCOBOL, GOBACK is STOP RUN in a main program and EXIT PROGRAM in a subprogram
+kind: operational
+status: proposed
+confidence: medium
+topics: [dialect, runtime, syntax]
+statement: >
+  In the GnuCOBOL Programmer's Guide, GOBACK logically terminates an
+  executing program. If executed within a subprogram (a subroutine or
+  user-defined function), GOBACK behaves like EXIT PROGRAM or EXIT
+  FUNCTION respectively. If executed within a main program, GOBACK acts
+  as STOP RUN. If executed by a main program, neither EXIT PROGRAM nor
+  EXIT FUNCTION takes any action. The guide presents GOBACK as the
+  preferred alternative to EXIT PROGRAM and EXIT FUNCTION for new
+  subprograms. The GnuCOBOL FAQ states that unlike STOP RUN, GOBACK
+  will properly unwind nested programs and only return to the operating
+  system when it occurs in a top-level program.
+sources:
+  - id: gnucobol-pg-html
+    locator: GOBACK / EXIT
+    quotes:
+      - "If executed within a subprogram (i.e. a subroutine or user-defined function), GOBACK behaves like an EXIT PROGRAM or EXIT FUNCTION statement, respectively."
+      - "If executed within a main program, GOBACK will act as a STOP RUN statement."
+      - "If executed by a main program, neither the EXIT PROGRAM nor EXIT FUNCTION statements will take any action."
+      - "the GOBACK statement should be strongly considered as the preferred alternative to both EXIT PROGRAM and EXIT FUNCTION for new subprograms."
+    paraphrase: false
+    role: primary
+  - id: gnucobol-faq
+    locator: GOBACK vs STOP RUN
+    quotes:
+      - "Unlike STOP RUN, GOBACK will properly unwind nested programs, and only return to the operating system when it occurs in a top level program."
+    paraphrase: false
+    role: secondary
+caveats:
+  - GnuCOBOL implementer docs, not IBM. IBM's own GOBACK/STOP RUN/EXIT PROGRAM table is a separate claim.
+created: "2026-09-01"
+updated: "2026-09-01"
+related: [goback-stop-run-exit-program, nested-programs-contained]

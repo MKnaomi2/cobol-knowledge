@@ -1,0 +1,28 @@
+id: trunc-bin-treats-binary-as-comp5
+title: TRUNC(BIN) treats BINARY, COMP, and COMP-4 as COMP-5
+kind: operational
+status: proposed
+confidence: high
+topics: [runtime, data, dialect]
+statement: >
+  The TRUNC(BIN) compiler option causes all binary data items (USAGE
+  BINARY, COMP, COMP-4) to be handled as if they were declared USAGE
+  COMP-5. TRUNC itself has no effect on COMP-5 data items; COMP-5 items
+  are handled as if TRUNC(BIN) is in effect regardless of the TRUNC
+  suboption specified.
+sources:
+  - id: ibm-cobol-zos-64-computational-items
+    locator: COMPUTATIONAL-5
+    quotes:
+      - "The TRUNC(BIN) compiler option causes all binary data items (USAGE BINARY, COMP, COMP-4) to be handled as if they were declared USAGE COMP-5."
+    paraphrase: false
+    role: primary
+  - id: ibm-cobol-zos-64-trunc
+    locator: TRUNC option
+    quotes:
+      - "TRUNC has no effect on COMP-5 data items; COMP-5 items are handled as if TRUNC(BIN) is in effect regardless of the TRUNC suboption specified."
+    paraphrase: false
+    role: secondary
+created: "2026-09-01"
+updated: "2026-09-01"
+related: [usage-comp5-native-binary-range, trunc-std-picture-digits]

@@ -1,0 +1,24 @@
+id: cics-xctl-same-logical-level
+title: EXEC CICS XCTL transfers control at the same logical level and releases the caller
+kind: operational
+status: proposed
+confidence: medium
+topics: [cics]
+statement: >
+  In the CICS/ESA 4.1 Application Programming Reference, XCTL transfers
+  control from one application program to another at the same logical level.
+  The program from which control is transferred is released. If the target
+  program is not already in main storage, it is loaded.
+sources:
+  - id: ibm-cics-esa-41-apr
+    role: primary
+    locator: XCTL command
+    paraphrase: false
+    quotes:
+      - "XCTL transfers control from one application program to another at the same logical level. The program from which control is transferred is released."
+      - "If the program to which control is transferred is not already in main storage, it is loaded."
+caveats:
+  - Same 1997 PDF caveat as cics-link-lower-logical-level.
+created: "2026-09-01"
+updated: "2026-09-01"
+related: [cics-link-lower-logical-level]

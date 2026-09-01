@@ -86,6 +86,8 @@
             "type": "string",
             "enum": ["primary", "secondary", "tertiary", "vendor", "news", "attestation", "practitioner"]
           },
+          "locator": { "type": "string" },
+          "paraphrase": { "type": "boolean" },
           "quotes": {
             "type": "array",
             "items": { "type": "string" }

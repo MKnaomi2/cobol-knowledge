@@ -1,0 +1,25 @@
+id: cics-link-lower-logical-level
+title: EXEC CICS LINK passes control to a program at the next lower logical level
+kind: operational
+status: proposed
+confidence: medium
+topics: [cics]
+statement: >
+  In the CICS/ESA 4.1 Application Programming Reference, LINK passes control
+  from an application program at one logical level to an application program
+  at the next lower logical level. When the linked-to program executes RETURN,
+  control comes back to the program that issued LINK at the next sequential
+  executable instruction.
+sources:
+  - id: ibm-cics-esa-41-apr
+    role: primary
+    locator: LINK command
+    paraphrase: false
+    quotes:
+      - "LINK passes control from an application program at one logical level to an application program at the next lower logical level."
+      - "When the RETURN command is executed in the linked-to program, control is returned to the program initiating the link at the next sequential executable instruction."
+caveats:
+  - Opened PDF is CICS/ESA 4.1 (1997). Later CICS still documents LINK this way; this record does not claim the 4.1 option list is complete for CICS TS 6.
+created: "2026-09-01"
+updated: "2026-09-01"
+related: [cics-xctl-same-logical-level]

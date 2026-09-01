@@ -1,0 +1,41 @@
+id: nested-programs-contained
+title: Nested programs are COBOL programs contained in other COBOL programs
+kind: operational
+status: proposed
+confidence: high
+topics: [syntax, dialect]
+statement: >
+  A COBOL program can contain other COBOL programs, which in turn can
+  contain still other COBOL programs. These contained programs are
+  called nested programs. Nested programs can be directly or indirectly
+  contained in the containing program. Nested programs are not supported
+  for programs compiled with the THREAD option. You can call a contained
+  program only from its directly containing program unless you identify
+  the contained program as COMMON in its PROGRAM-ID paragraph; then you
+  can call the common program from any program contained (directly or
+  indirectly) in the same program as the common program. Only contained
+  programs can be identified as COMMON. Recursive calls are not allowed.
+  Contained programs cannot have a CONFIGURATION SECTION. Use an END
+  PROGRAM marker to terminate contained and containing programs.
+sources:
+  - id: ibm-cobol-zos-65-nested-programs
+    locator: Nested programs
+    quotes:
+      - "A COBOL program can contain other COBOL programs, which in turn can contain still other COBOL programs."
+      - "These contained programs are called nested programs."
+      - "Nested programs can be directly or indirectly contained in the containing program."
+      - "Nested programs are not supported for programs compiled with the THREAD option."
+    paraphrase: false
+    role: primary
+  - id: ibm-cobol-zos-64-calling-nested
+    locator: Calling nested COBOL programs
+    quotes:
+      - "You can call a contained program only from its directly containing program unless you identify the contained program as COMMON in its PROGRAM-ID paragraph."
+      - "Only contained programs can be identified as COMMON."
+      - "Recursive calls are not allowed."
+      - "Contained programs cannot have a CONFIGURATION SECTION."
+    paraphrase: false
+    role: secondary
+created: "2026-09-01"
+updated: "2026-09-01"
+related: [goback-stop-run-exit-program]

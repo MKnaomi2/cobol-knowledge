@@ -148,3 +148,381 @@ sources:
     independence: news-secondary
     method: Feature; cites historical Gartner-era 80%-of-code-by-2000 figure and GDP-cost estimate.
     notes: Useful historiography; not a primary census.
+
+  - id: ibm-cobol-zos-64-picture-clause
+    title: "PICTURE clause (Enterprise COBOL for z/OS 6.4 Language Reference)"
+    url: https://www.ibm.com/docs/en/cobol-zos/6.4?topic=entry-picture-clause
+    year: 2026
+    publisher: IBM
+    independence: vendor
+    method: IBM Docs HTML Language Reference topic, last updated 2026-02-27.
+    notes: Spec cite for PICTURE/PIC; not a measurement.
+
+  - id: ibm-cobol-zos-64-picture-symbols
+    title: "Symbols used in the PICTURE clause (Enterprise COBOL for z/OS 6.4 Language Reference)"
+    url: https://www.ibm.com/docs/en/cobol-zos/6.4.0?topic=clause-symbols-used-in-picture
+    year: 2026
+    publisher: IBM
+    independence: vendor
+    method: IBM Docs HTML Language Reference topic, last updated 2026-02-27.
+    notes: Picture-symbol sizes by USAGE, including NATIONAL = 2 bytes.
+
+  - id: ibm-cobol-zos-64-picture-categories
+    title: "Data categories and PICTURE rules (Enterprise COBOL for z/OS 6.4 Language Reference)"
+    url: https://www.ibm.com/docs/en/cobol-zos/6.4.0?topic=clause-data-categories-picture-rules
+    year: 2026
+    publisher: IBM
+    independence: vendor
+    method: IBM Docs HTML Language Reference topic, last updated 2026-02-27.
+    notes: Numeric PICTURE symbols 9, P, S, V.
+
+  - id: ibm-cobol-zos-64-numeric-formats
+    title: "Formats for numeric data (Enterprise COBOL for z/OS 6.4 Programming Guide)"
+    url: https://www.ibm.com/docs/en/cobol-zos/6.4.0?topic=arithmetic-formats-numeric-data
+    year: 2026
+    publisher: IBM
+    independence: vendor
+    method: IBM Docs HTML Programming Guide topic, last updated 2026-02-27.
+    notes: BINARY/COMP/COMP-4, COMP-5 ranges, COMP-3 packed-decimal storage.
+
+  - id: ibm-cobol-zos-64-computational-items
+    title: "Computational items (Enterprise COBOL for z/OS 6.4 Language Reference)"
+    url: https://www.ibm.com/docs/en/cobol-zos/6.4.0?topic=clause-computational-items
+    year: 2026
+    publisher: IBM
+    independence: vendor
+    method: IBM Docs HTML Language Reference topic, last updated 2026-02-27.
+    notes: COMP-3=PACKED-DECIMAL; COMP-4=BINARY; COMP-5 native binary.
+
+  - id: ibm-cobol-zos-64-usage-clause
+    title: "USAGE clause (Enterprise COBOL for z/OS 6.4 Language Reference)"
+    url: https://www.ibm.com/docs/en/cobol-zos/6.4?topic=entry-usage-clause
+    year: 2026
+    publisher: IBM
+    independence: vendor
+    method: IBM Docs HTML Language Reference topic, last updated 2026-02-27.
+    notes: USAGE not allowed on 66/88; default DISPLAY vs NATIONAL vs DISPLAY-1.
+
+  - id: ibm-cobol-zos-64-redefines
+    title: "REDEFINES clause (Enterprise COBOL for z/OS 6.4 Language Reference)"
+    url: https://www.ibm.com/docs/en/cobol-zos/6.4.0?topic=entry-redefines-clause
+    year: 2026
+    publisher: IBM
+    independence: vendor
+    method: IBM Docs HTML Language Reference topic, last updated 2026-02-27.
+    notes: Same storage, different descriptions; no VALUE on redefining item.
+
+  - id: ibm-cobol-zos-63-condition-name-value
+    title: "VALUE clause Format 2 condition-name (Enterprise COBOL for z/OS 6.3 Language Reference)"
+    url: https://www.ibm.com/docs/en/cobol-zos/6.3.0?topic=vc-format-2
+    year: 2025
+    publisher: IBM
+    independence: vendor
+    method: IBM Docs HTML Language Reference topic, last updated 2025-02-03.
+    notes: Level-88 condition-name VALUE rules.
+
+  - id: ibm-cobol-zos-64-evaluate-statement
+    title: "EVALUATE statement (Enterprise COBOL for z/OS 6.4 Language Reference)"
+    url: https://www.ibm.com/docs/en/cobol-zos/6.4.0?topic=statements-evaluate-statement
+    year: 2026
+    publisher: IBM
+    independence: vendor
+    method: IBM Docs HTML Language Reference topic, last updated 2026-02-27.
+    notes: EVALUATE as nested-IF shorthand; selection subjects/objects.
+
+  - id: ibm-cobol-zos-64-using-evaluate
+    title: "Using the EVALUATE statement (Enterprise COBOL for z/OS 6.4 Programming Guide)"
+    url: https://www.ibm.com/docs/en/cobol-zos/6.4.0?topic=actions-using-evaluate-statement
+    year: 2026
+    publisher: IBM
+    independence: vendor
+    method: IBM Docs HTML Programming Guide topic, last updated 2026-02-27.
+    notes: Case/decision-table use; WHEN OTHER last.
+
+  - id: ibm-cobol-zos-64-perform-statement
+    title: "PERFORM statement (Enterprise COBOL for z/OS 6.4 Language Reference)"
+    url: https://www.ibm.com/docs/en/cobol-zos/6.4.0?topic=statements-perform-statement
+    year: 2026
+    publisher: IBM
+    independence: vendor
+    method: IBM Docs HTML Language Reference topic, last updated 2026-02-27.
+    notes: Inline vs out-of-line PERFORM; END-PERFORM required for inline.
+
+  - id: ibm-cobol-zos-64-ending-reentering
+    title: "Ending and reentering main programs or subprograms (Enterprise COBOL for z/OS 6.4 Programming Guide)"
+    url: https://www.ibm.com/docs/en/cobol-zos/6.4.0?topic=subprograms-ending-reentering-main-programs
+    year: 2026
+    publisher: IBM
+    independence: vendor
+    method: IBM Docs HTML Programming Guide topic, last updated 2026-02-27.
+    notes: EXIT PROGRAM vs STOP RUN vs GOBACK table.
+
+  - id: ibm-cobol-zos-64-copy-statement
+    title: "COPY statement (Enterprise COBOL for z/OS 6.4 Language Reference)"
+    url: https://www.ibm.com/docs/en/cobol-zos/6.4?topic=statements-copy-statement
+    year: 2026
+    publisher: IBM
+    independence: vendor
+    method: IBM Docs HTML Language Reference topic, last updated 2026-02-27.
+    notes: COPY replaces itself with library text; REPLACING; nested COPY.
+
+  - id: ibm-cobol-zos-64-copy-replacing-rules
+    title: "Comparison and replacement rules (Enterprise COBOL for z/OS 6.4 Language Reference)"
+    url: https://www.ibm.com/docs/en/cobol-zos/6.4?topic=statement-comparison-replacement-rules
+    year: 2026
+    publisher: IBM
+    independence: vendor
+    method: IBM Docs HTML Language Reference topic, last updated 2026-02-27.
+    notes: One COPY REPLACING per nested COPY chain.
+
+  - id: ibm-cobol-zos-65-initialize-statement
+    title: "INITIALIZE statement (Enterprise COBOL for z/OS 6.5 Language Reference)"
+    url: https://www.ibm.com/docs/en/cobol-zos/6.5.0?topic=statements-initialize-statement
+    year: 2026
+    publisher: IBM
+    independence: vendor
+    method: IBM Docs HTML Language Reference topic, last updated 2026-01-30.
+    notes: FILLER, VALUE, REPLACING phrases.
+
+  - id: ibm-cobol-zos-64-initialize-structure
+    title: "Initializing a structure (INITIALIZE) (Enterprise COBOL for z/OS 6.4 Programming Guide)"
+    url: https://www.ibm.com/docs/en/cobol-zos/6.4?topic=items-initializing-structure-initialize
+    year: 2026
+    publisher: IBM
+    independence: vendor
+    method: IBM Docs HTML Programming Guide topic, last updated 2026-02-27.
+    notes: SPACE/ZERO implied senders; group semantics.
+
+  - id: ibm-cobol-zos-64-initialize-examples
+    title: "Examples: initializing data items (Enterprise COBOL for z/OS 6.4 Programming Guide)"
+    url: https://www.ibm.com/docs/en/cobol-zos/6.4.0?topic=items-examples-initializing-data
+    year: 2026
+    publisher: IBM
+    independence: vendor
+    method: IBM Docs HTML Programming Guide topic, last updated 2026-02-27.
+    notes: INITIALIZE functionally equivalent to MOVE statements.
+
+  - id: ibm-cobol-zos-65-corresponding-phrase
+    title: "CORRESPONDING phrase (Enterprise COBOL for z/OS 6.5 Language Reference)"
+    url: https://www.ibm.com/docs/en/SS6SG3_6.5/lr/ref/rlpdscor.html
+    year: 2026
+    publisher: IBM
+    independence: vendor
+    method: IBM Docs HTML Language Reference topic, last updated 2026-01-30.
+    notes: ADD/SUBTRACT/MOVE CORRESPONDING matching names.
+
+  - id: ibm-cobol-zos-64-pointer-phrase
+    title: "POINTER phrase (Enterprise COBOL for z/OS 6.4 Language Reference)"
+    url: https://www.ibm.com/docs/en/cobol-zos/6.4.0?topic=clause-pointer-phrase
+    year: 2026
+    publisher: IBM
+    independence: vendor
+    method: IBM Docs HTML Language Reference topic, last updated 2026-02-27.
+    notes: USAGE POINTER 4 or 8 bytes by LP(32)/LP(64).
+
+  - id: ibm-cobol-zos-65-nested-programs
+    title: "Nested programs (Enterprise COBOL for z/OS 6.5 Language Reference)"
+    url: https://www.ibm.com/docs/en/cobol-zos/6.5.0?topic=structure-nested-programs
+    year: 2026
+    publisher: IBM
+    independence: vendor
+    method: IBM Docs HTML Language Reference topic, last updated 2026-01-30.
+    notes: Contained programs; not supported with THREAD.
+
+  - id: ibm-cobol-zos-64-calling-nested
+    title: "Calling nested COBOL programs (Enterprise COBOL for z/OS 6.4 Programming Guide)"
+    url: https://www.ibm.com/docs/en/cobol-zos/6.4.0?topic=program-calling-nested-cobol-programs
+    year: 2026
+    publisher: IBM
+    independence: vendor
+    method: IBM Docs HTML Programming Guide topic, last updated 2026-02-27.
+    notes: COMMON contained programs; recursive calls not allowed.
+
+  - id: ibm-cobol-zos-63-json-generate
+    title: "JSON GENERATE statement (Enterprise COBOL for z/OS 6.3 Language Reference)"
+    url: https://www.ibm.com/docs/en/cobol-zos/6.3.0?topic=statements-json-generate-statement
+    year: 2025
+    publisher: IBM
+    independence: vendor
+    method: IBM Docs HTML Language Reference topic, last updated 2025-02-03.
+    notes: JSON GENERATE FROM COBOL data items.
+
+  - id: ibm-cobol-zos-64-json-generate-operation
+    title: "Operation of JSON GENERATE (Enterprise COBOL for z/OS 6.4 Language Reference)"
+    url: https://www.ibm.com/docs/en/cobol-zos/6.4.0?topic=statement-operation-json-generate
+    year: 2026
+    publisher: IBM
+    independence: vendor
+    method: IBM Docs HTML Language Reference topic, last updated 2026-02-27.
+    notes: COUNT phrase; leftover receiver data; JSON-CODE.
+
+  - id: ibm-cobol-zos-64-xml-parse
+    title: "XML PARSE statement (Enterprise COBOL for z/OS 6.4 Language Reference)"
+    url: https://www.ibm.com/docs/en/cobol-zos/6.4.0?topic=statements-xml-parse-statement
+    year: 2026
+    publisher: IBM
+    independence: vendor
+    method: IBM Docs HTML Language Reference topic, last updated 2026-02-27.
+    notes: Parses XML into pieces passed to a processing procedure.
+
+  - id: ibm-cobol-zos-64-processing-xml
+    title: "Processing XML input (Enterprise COBOL for z/OS 6.4 Programming Guide)"
+    url: https://www.ibm.com/docs/en/cobol-zos/6.4.0?topic=services-processing-xml-input
+    year: 2026
+    publisher: IBM
+    independence: vendor
+    method: IBM Docs HTML Programming Guide topic, last updated 2026-02-27.
+    notes: XMLPARSE(XMLSS) vs COMPAT; AMODE 31 link-edit.
+
+  - id: ibm-cobol-zos-64-national-utf16
+    title: "Processing UTF-8 data using UTF-16 (national) data types (Enterprise COBOL for z/OS 6.4 Programming Guide)"
+    url: https://www.ibm.com/docs/en/cobol-zos/6.4.0?topic=pdiie-processing-utf-8-data-using-utf-16-national-data-types
+    year: 2026
+    publisher: IBM
+    independence: vendor
+    method: IBM Docs HTML Programming Guide topic, last updated 2026-02-27.
+    notes: National data encoded in UTF-16.
+
+  - id: ibm-cobol-zos-65-ssrange
+    title: "SSRANGE (Enterprise COBOL for z/OS 6.5 Programming Guide)"
+    url: https://www.ibm.com/docs/en/cobol-zos/6.5.0?topic=ecco-ssrange
+    year: 2026
+    publisher: IBM
+    independence: vendor
+    method: IBM Docs HTML Programming Guide topic, last updated 2026-01-30.
+    notes: Default NO; ZLEN/NOZLEN; MSG/ABD.
+
+  - id: ibm-cobol-zos-64-dynam
+    title: "DYNAM (Enterprise COBOL for z/OS 6.4 Programming Guide)"
+    url: https://www.ibm.com/docs/en/cobol-zos/6.4?topic=options-dynam
+    year: 2026
+    publisher: IBM
+    independence: vendor
+    method: IBM Docs HTML Programming Guide topic, last updated 2026-02-27.
+    notes: Default NODYNAM; CALL literal dynamic load.
+
+  - id: ibm-cobol-zos-64-rent
+    title: "RENT (Enterprise COBOL for z/OS 6.4 Programming Guide)"
+    url: https://www.ibm.com/docs/en/cobol-zos/6.4.0?topic=options-rent
+    year: 2026
+    publisher: IBM
+    independence: vendor
+    method: IBM Docs HTML Programming Guide topic, last updated 2026-02-27.
+    notes: Default RENT; NORENT requires RMODE 24.
+
+  - id: ibm-cobol-zos-64-trunc
+    title: "TRUNC (Enterprise COBOL for z/OS 6.4 Programming Guide)"
+    url: https://www.ibm.com/docs/en/cobol-zos/6.4.0?topic=options-trunc
+    year: 2026
+    publisher: IBM
+    independence: vendor
+    method: IBM Docs HTML Programming Guide topic, last updated 2026-02-27.
+    notes: TRUNC(STD|OPT|BIN); no effect on COMP-5.
+
+  - id: ibm-cobol-zos-63-numproc
+    title: "NUMPROC (Enterprise COBOL for z/OS 6.3 Programming Guide)"
+    url: https://www.ibm.com/docs/en/cobol-zos/6.3.0?topic=options-numproc
+    year: 2024
+    publisher: IBM
+    independence: vendor
+    method: IBM Docs HTML Programming Guide topic, last updated 2024-11-29.
+    notes: Default NUMPROC(NOPFD); preferred-sign rules for PFD.
+
+  - id: ibm-cobol-zos-65-lp
+    title: "LP (Enterprise COBOL for z/OS 6.5 Programming Guide)"
+    url: https://www.ibm.com/docs/en/cobol-zos/6.5.0?topic=options-lp
+    year: 2026
+    publisher: IBM
+    independence: vendor
+    method: IBM Docs HTML Programming Guide topic, last updated 2026-01-30.
+    notes: LP(32) AMODE 31 vs LP(64) AMODE 64; default LP(32).
+
+  - id: gnucobol-doc-html
+    title: "GnuCOBOL Manual"
+    url: https://gnucobol.sourceforge.io/doc/gnucobol.html
+    year: 2022
+    publisher: GnuCOBOL
+    independence: unknown
+    method: Project HTML manual; dialect -std= options.
+    notes: Implementer docs, not IBM Language Reference.
+
+  - id: gnucobol-pg-html
+    title: "GnuCOBOL Programmer’s Guide (HTML)"
+    url: https://gnucobol.sourceforge.io/HTML/gnucobpg.html
+    year: 2020
+    publisher: GnuCOBOL
+    independence: unknown
+    method: Programmer’s Guide HTML, documents July 2020 GnuCOBOL 3.1 RC-1.
+    notes: EXIT PROGRAM / GOBACK / STOP RUN dialect text.
+
+  - id: gnucobol-faq
+    title: "GnuCOBOL FAQ and How To"
+    url: https://gnucobol.sourceforge.io/faq/
+    year: 2025
+    publisher: GnuCOBOL
+    independence: unknown
+    method: Project FAQ HTML, last seen dated 2025-02-18.
+    notes: Practitioner-oriented; not IBM.
+
+  - id: nbs-handbook-113-1973
+    title: "CODASYL Data Description Language Journal of Development (NBS Handbook 113)"
+    url: https://nvlpubs.nist.gov/nistpubs/Legacy/HB/nbshandbook113.pdf
+    year: 1973
+    publisher: National Bureau of Standards
+    independence: independent
+    method: US government handbook reprinting CODASYL committee history dated June 1973.
+    notes: Used for 1959 Pentagon / University of Pennsylvania chronology, not for modern line counts.
+
+  - id: ibm-zos-v1r4-jcl-reference
+    title: "z/OS V1R4.0 MVS JCL Reference (SA22-7597-05)"
+    url: https://publibfp.dhe.ibm.com/epubs/pdf/iea2b631.pdf
+    year: 2003
+    publisher: IBM
+    independence: vendor
+    method: IBM PDF extracted locally 2026-09-01 (pdftotext). Sixth edition, June 2003.
+    notes: JCL EXEC/DD purpose statements. Edition is old; syntax cited is still the public definition.
+
+  - id: ibm-cics-esa-41-apr
+    title: "CICS/ESA 4.1 Application Programming Reference (SC33-1170-03)"
+    url: https://publibfp.dhe.ibm.com/epubs/pdf/dfhlp420.pdf
+    year: 1997
+    publisher: IBM
+    independence: vendor
+    method: IBM PDF extracted locally 2026-09-01. Second edition April 1997.
+    notes: LINK vs XCTL logical-level behavior. Later CICS releases exist; this is the opened PDF.
+
+  - id: ibm-ims-v9-tm-apg
+    title: "IMS V9 Application Programming: Transaction Manager (SC18-7812-04)"
+    url: https://publibfp.dhe.ibm.com/epubs/pdf/dfsaptg5.pdf
+    year: 2005
+    publisher: IBM
+    independence: vendor
+    method: IBM PDF extracted locally 2026-09-01.
+    notes: COBOL CALL CBLTDLI interface format.
+
+  - id: ibm-cobol-zos-64-programming-guide
+    title: "Enterprise COBOL for z/OS 6.4 Programming Guide (SC27-8714-03)"
+    url: https://publibfp.dhe.ibm.com/epubs/pdf/igy6pg40.pdf
+    year: 2024
+    publisher: IBM
+    independence: vendor
+    method: IBM PDF, fourth edition 28 June 2024 update. Extracted locally 2026-09-01.
+    notes: QSAM/VSAM/z/OS UNIX access methods as stated in Chapter 8.
+
+  - id: arxiv-xcobol-2023
+    title: "X-COBOL: A Dataset of COBOL Repositories"
+    url: https://arxiv.org/abs/2306.04892
+    year: 2023
+    publisher: arXiv
+    independence: independent
+    method: Research preprint describing a public COBOL repository dataset.
+    notes: Corpus paper. Not a production line-count census.
+
+  - id: arxiv-opencbs-2022
+    title: "OpenCBS: An Open-Source COBOL Defects Benchmark Suite"
+    url: https://arxiv.org/abs/2206.06260
+    year: 2022
+    publisher: arXiv
+    independence: independent
+    method: Research preprint; companion GitHub defect suite.
+    notes: 43 programs from forum defects. Training/tool benchmark, not shop folklore.

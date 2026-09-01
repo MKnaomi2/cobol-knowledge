@@ -1,0 +1,25 @@
+id: numproc-nopfd-nonpreferred-signs
+title: NUMPROC(NOPFD) accepts nonpreferred decimal signs; default is NOPFD
+kind: operational
+status: proposed
+confidence: high
+topics: [runtime, data]
+statement: >
+  Use NUMPROC(NOPFD) if internal decimal and zoned decimal data might
+  use nonpreferred signs. Default is NUMPROC(NOPFD). With NOPFD, the
+  compiler accepts any valid sign configuration: X'A', X'B', X'C', X'D',
+  X'E', or X'F'.
+sources:
+  - id: ibm-cobol-zos-63-numproc
+    locator: NUMPROC
+    quotes:
+      - "Use NUMPROC(NOPFD) if your internal decimal and zoned decimal data might use nonpreferred signs."
+      - "Default is: NUMPROC(NOPFD)"
+      - "The compiler accepts any valid sign configuration: X'A', X'B', X'C', X'D', X'E', or X'F'."
+    paraphrase: false
+    role: primary
+caveats:
+  - Cited from Enterprise COBOL for z/OS 6.3 Programming Guide. NUMPROC(PFD) preferred-sign behavior is described on that page; this claim states only the NOPFD default and the listed sign nibbles.
+created: "2026-09-01"
+updated: "2026-09-01"
+related: [usage-comp3-packed-decimal-storage]

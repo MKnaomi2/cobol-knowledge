@@ -1,0 +1,27 @@
+id: gnucobol-std-ibm-compatible
+title: GnuCOBOL -std=ibm selects an IBM-compatible dialect
+kind: operational
+status: proposed
+confidence: medium
+topics: [dialect]
+statement: >
+  The GnuCOBOL compiler uses dialect-specific options that may be set
+  via -std=, a configuration file via -conf=, or single dialect flags.
+  With strict dialects, GnuCOBOL tries to limit both the feature-set
+  and reserved words to the specified compiler. -std=ibm-strict and
+  -std=ibm are described as IBM compatible. COBOL sources compiled with
+  non-strict dialects may work only with GnuCOBOL.
+sources:
+  - id: gnucobol-doc-html
+    locator: Compiler dialects
+    quotes:
+      - "The compiler uses many dialect specific options. These may be set via a defined dialect by '-std=', a configuration file by '-conf=' or by using the single dialect flags directly."
+      - "The GnuCOBOL compiler tries to limit both the feature-set and reserved words to the specified compiler when the \"strict\" dialects are used."
+      - "'-std=ibm-strict, -std=ibm' IBM compatible"
+    paraphrase: false
+    role: primary
+caveats:
+  - This is GnuCOBOL implementer documentation, not IBM Language Reference. Compatibility is stated by GnuCOBOL, not certified by IBM.
+created: "2026-09-01"
+updated: "2026-09-01"
+related: [gnucobol-goback-main-stop-run-sub-exit]

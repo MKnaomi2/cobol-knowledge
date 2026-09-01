@@ -1,0 +1,34 @@
+id: corresponding-same-name-elementary
+title: CORRESPONDING operates on same-named elementary items in two groups
+kind: operational
+status: proposed
+confidence: high
+topics: [syntax, data]
+statement: >
+  The CORRESPONDING (CORR) phrase causes ADD, SUBTRACT, and MOVE
+  operations to be performed on elementary data items of the same name
+  if the alphanumeric group item or national group item to which they
+  belong is specified. A national group is processed as a group item
+  when CORRESPONDING is used. Both identifiers following CORRESPONDING
+  must name group items. Two subordinate items correspond if they have
+  the same name and the same qualifiers up to but not including the two
+  group identifiers; they are not identified by FILLER; and, for ADD or
+  SUBTRACT, both are elementary numeric, while for MOVE at least one is
+  elementary and the move is permitted. Neither group identifier may be
+  a level 66, 77, or 88 item, an index data item, reference-modified, or
+  described with USAGE POINTER, FUNCTION-POINTER, PROCEDURE-POINTER, or
+  OBJECT REFERENCE.
+sources:
+  - id: ibm-cobol-zos-65-corresponding-phrase
+    locator: CORRESPONDING phrase
+    quotes:
+      - "The CORRESPONDING (CORR) phrase causes ADD, SUBTRACT, and MOVE operations to be performed on elementary data items of the same name if the alphanumeric group item or national group item to which they belong is specified."
+      - "A national group is processed as a group item when the CORRESPONDING phrase is used."
+      - "Both identifiers that follow the keyword CORRESPONDING must name group items."
+      - "The two subordinate items have the same name and the same qualifiers up to but not including identifier-1 and identifier-2."
+      - "The subordinate items are not identified by the keyword FILLER."
+    paraphrase: false
+    role: primary
+created: "2026-09-01"
+updated: "2026-09-01"
+related: [initialize-equivalent-to-moves, usage-pointer-4-or-8-bytes]

@@ -1,0 +1,30 @@
+id: redefines-same-computer-storage
+title: REDEFINES describes the same storage with a different layout
+kind: operational
+status: proposed
+confidence: high
+topics: [syntax, data]
+statement: >
+  The REDEFINES clause allows different data description entries to
+  describe the same computer storage area. When specified, REDEFINES
+  must be the first entry following data-name-1 or FILLER (or following
+  the level-number if those names are omitted). Neither data-name-1 nor
+  any of its subordinate entries can contain a VALUE clause. The data
+  description entry for data-name-2 cannot contain an OCCURS clause.
+  Neither data-name-1 nor data-name-2 can be defined with level-number
+  66 or 88.
+sources:
+  - id: ibm-cobol-zos-64-redefines
+    locator: REDEFINES clause
+    quotes:
+      - "The REDEFINES clause allows you to use different data description entries to describe the same computer storage area."
+      - "When specified, the REDEFINES clause must be the first entry following data-name-1 or FILLER."
+      - "Neither data-name-1 nor any of its subordinate entries can contain a VALUE clause."
+      - "The data description entry for data-name-2 cannot contain an OCCURS clause."
+    paraphrase: false
+    role: primary
+caveats:
+  - The z/OS 6.4 page states the object cannot contain OCCURS; other IBM COBOL products (for example ILE COBOL on IBM i) have their own REDEFINES rules and should not be assumed identical.
+created: "2026-09-01"
+updated: "2026-09-01"
+related: []

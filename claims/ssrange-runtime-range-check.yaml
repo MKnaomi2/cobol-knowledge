@@ -1,0 +1,30 @@
+id: ssrange-runtime-range-check
+title: SSRANGE generates runtime checks of subscripts and reference modification
+kind: operational
+status: proposed
+confidence: high
+topics: [runtime]
+statement: >
+  SSRANGE generates code that checks subscripts, reference modification,
+  variable-length group ranges, and UTF-8 character positions at run
+  time to verify they do not violate their defined ranges. The default
+  is SSRANGE=NO, which generates no code to perform subscript or index
+  checking at run time. YES generates the checking code. ZLEN specifies
+  that a zero-length reference-modification starting at one character
+  past the end of the data item does not cause a runtime error; NOZLEN
+  specifies that it does. MSG and ABD control whether a range violation
+  produces a message or an abend.
+sources:
+  - id: ibm-cobol-zos-65-ssrange
+    locator: SSRANGE
+    quotes:
+      - "Generates code that checks subscripts, reference modifications, variable-length group ranges, and UTF-8 character positions at run time to verify that they do not violate their defined ranges."
+      - "Default SSRANGE=NO"
+      - "NO: No code is generated to perform subscript or index checking at run time."
+    paraphrase: false
+    role: primary
+caveats:
+  - Quoted from Enterprise COBOL for z/OS 6.5 Programming Guide SSRANGE topic. Suboptions YES/ZLEN/NOZLEN/MSG/ABD are described on that page; if a given suboption wording is needed, re-open the page rather than inferring.
+created: "2026-09-01"
+updated: "2026-09-01"
+related: [trunc-std-picture-digits]

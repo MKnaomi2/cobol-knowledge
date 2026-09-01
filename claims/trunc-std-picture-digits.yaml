@@ -1,0 +1,33 @@
+id: trunc-std-picture-digits
+title: TRUNC(STD) truncates BINARY receivers to PICTURE digit count
+kind: operational
+status: proposed
+confidence: high
+topics: [runtime, data]
+statement: >
+  Default TRUNC is TRUNC(STD). TRUNC(STD) applies only to USAGE BINARY
+  receiving fields in MOVE statements and arithmetic expressions. When
+  TRUNC(STD) is in effect, the final result of an arithmetic expression,
+  or the sending field in a MOVE statement, is truncated to the number
+  of digits in the PICTURE clause of the BINARY receiving field.
+  TRUNC(OPT) is a performance option; when it is in effect, the compiler
+  assumes that data conforms to PICTURE specifications in USAGE BINARY
+  receiving fields in MOVE statements and arithmetic expressions.
+  TRUNC(BIN) applies to all COBOL language that processes USAGE BINARY
+  data; when it is in effect, all binary items (USAGE COMP, COMP-4, or
+  BINARY) are handled as native hardware binary items. TRUNC has no
+  effect on COMP-5 data items.
+sources:
+  - id: ibm-cobol-zos-64-trunc
+    locator: TRUNC option
+    quotes:
+      - "Default is: TRUNC(STD)"
+      - "TRUNC has no effect on COMP-5 data items; COMP-5 items are handled as if TRUNC(BIN) is in effect regardless of the TRUNC suboption specified."
+      - "TRUNC(STD) applies only to USAGE BINARY receiving fields in MOVE statements and arithmetic expressions."
+      - "When TRUNC(STD) is in effect, the final result of an arithmetic expression, or the sending field in the MOVE statement, is truncated to the number of digits in the PICTURE clause of the BINARY receiving field."
+      - "TRUNC(OPT) is a performance option. When TRUNC(OPT) is in effect, the compiler assumes that data conforms to PICTURE specifications in USAGE BINARY receiving fields in MOVE statements and arithmetic expressions."
+    paraphrase: false
+    role: primary
+created: "2026-09-01"
+updated: "2026-09-01"
+related: [trunc-bin-treats-binary-as-comp5, usage-comp5-native-binary-range]

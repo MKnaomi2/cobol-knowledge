@@ -1,0 +1,23 @@
+id: jcl-dd-describes-dataset
+title: A JCL DD statement identifies and describes a data set
+kind: operational
+status: proposed
+confidence: high
+topics: [jcl, zos]
+statement: >
+  In z/OS MVS JCL, the DD (data definition) statement identifies and
+  describes a data set and specifies the input and output resources needed
+  for that data set.
+sources:
+  - id: ibm-zos-v1r4-jcl-reference
+    role: primary
+    locator: "Chapter 12. DD Statement / statement summary table"
+    paraphrase: false
+    quotes:
+      - "// DD data definition Identifies and describes a data set."
+      - "Use the DD (data definition) statement to describe a data set and to specify the input and output resources needed for the data set."
+caveats:
+  - Source edition is z/OS V1R4 (2003). Later JCL still uses DD for this purpose; this record cites the opened PDF, not a 2026 library.
+created: "2026-09-01"
+updated: "2026-09-01"
+related: [jcl-exec-identifies-program]

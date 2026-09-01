@@ -1,0 +1,32 @@
+id: lp-option-amode-31-or-64
+title: LP(32) generates AMODE 31; LP(64) generates AMODE 64
+kind: operational
+status: proposed
+confidence: high
+topics: [runtime, dialect]
+statement: >
+  Use the LP compiler option to indicate whether an AMODE 31 (31-bit)
+  or AMODE 64 (64-bit) program should be generated with the related
+  language features enabled. Default is LP(32). LP(32) generates an
+  AMODE 31 program. LP(64) generates an AMODE 64 program. Language
+  Environment does not support mixing AMODE 64 and AMODE 31 programs
+  in the same application; if one program is compiled with LP(64), all
+  programs within the application should also be compiled with LP(64).
+  Programs compiled with LP(64) cannot contain XML GENERATE or XML PARSE
+  statements, JSON GENERATE or JSON PARSE statements, object-oriented
+  COBOL statements, ALTER statements, GO TO . statements, and DISPLAY
+  ... UPON SYSPUNCH statements.
+sources:
+  - id: ibm-cobol-zos-65-lp
+    locator: LP
+    quotes:
+      - "Use the LP compiler option to indicate whether a AMODE 31 (31-bit) or AMODE 64 (64-bit) program should be generated with the related language features enabled."
+      - "Default is: LP(32)"
+      - "LP(32) Indicates that an AMODE 31 (31-bit) program should be generated with the related language features enabled."
+      - "LP(64) Indicates that an AMODE 64 (64-bit) program should be generated with the related language features enabled."
+      - "Programs compiled with LP(64) cannot contain XML GENERATE or XML PARSE statements, JSON GENERATE or JSON PARSE statements, object-oriented COBOL statements, ALTER statements, GO TO . statements, and DISPLAY ... UPON SYSPUNCH statements."
+    paraphrase: false
+    role: primary
+created: "2026-09-01"
+updated: "2026-09-01"
+related: [usage-pointer-4-or-8-bytes, json-generate-from-cobol-data, xml-parse-to-processing-procedure]

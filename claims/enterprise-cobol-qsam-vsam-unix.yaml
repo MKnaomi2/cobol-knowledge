@@ -1,0 +1,23 @@
+id: enterprise-cobol-qsam-vsam-unix
+title: Enterprise COBOL z/OS I/O is QSAM, VSAM, or the z/OS UNIX file system
+kind: operational
+status: proposed
+confidence: high
+topics: [files, zos]
+statement: >
+  Enterprise COBOL for z/OS 6.4 Programming Guide states that requests to
+  the operating system for storage and retrieval of records are handled by
+  QSAM and VSAM, and the z/OS UNIX file system. In that book, COBOL "file"
+  and OS "data set" are used interchangeably. FILE-CONTROL examples are given
+  for a QSAM sequential file, a VSAM indexed file, and a line-sequential file.
+sources:
+  - id: ibm-cobol-zos-64-programming-guide
+    role: primary
+    locator: "Chapter 8. Processing files"
+    paraphrase: false
+    quotes:
+      - "With IBM Enterprise COBOL for z/OS, requests to the operating system for the storage and retrieval of records from input-output devices are handled by the two access methods QSAM and VSAM, and the z/OS UNIX file system."
+      - "The terms file in COBOL terminology and data set in operating-system terminology have essentially the same meaning and are used interchangeably in this information."
+      - "The following table shows example FILE-CONTROL entries for a QSAM sequential file, a VSAM indexed file, and a line-sequential file."
+created: "2026-09-01"
+updated: "2026-09-01"

@@ -1,0 +1,31 @@
+id: national-usage-utf16-two-bytes
+title: USAGE NATIONAL stores UTF-16; each PICTURE position takes 2 bytes
+kind: operational
+status: proposed
+confidence: high
+topics: [data, dialect]
+statement: >
+  National data is encoded in UTF-16. For USAGE NATIONAL, each PICTURE
+  character position (except for V, if used) takes 2 bytes of storage.
+  The picture-symbol table lists NATIONAL as national class with size 2.
+  When USAGE NATIONAL is in effect for a floating-point data item, each
+  PICTURE character position (except for V, if used) takes 2 bytes of
+  storage.
+sources:
+  - id: ibm-cobol-zos-64-national-utf16
+    locator: Processing UTF-8 using UTF-16 national
+    quotes:
+      - "National data is encoded in UTF-16, which uses one encoding unit for almost all commonly encountered characters."
+    paraphrase: false
+    role: primary
+  - id: ibm-cobol-zos-64-picture-symbols
+    locator: Symbols used in the PICTURE clause
+    quotes:
+      - "When USAGE NATIONAL is in effect for a floating-point data item, each PICTURE character position (except for v, if used) takes 2 bytes of storage."
+    paraphrase: false
+    role: secondary
+caveats:
+  - UTF-8 data can instead be processed with USAGE UTF-8; the cited page presents national (UTF-16) as an alternative conversion path.
+created: "2026-09-01"
+updated: "2026-09-01"
+related: [picture-clause-elementary-required]

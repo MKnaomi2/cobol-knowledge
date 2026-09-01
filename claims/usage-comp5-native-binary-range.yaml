@@ -1,0 +1,41 @@
+id: usage-comp5-native-binary-range
+title: COMP-5 holds the full native binary range, truncating at field size
+kind: operational
+status: proposed
+confidence: high
+topics: [data, dialect, runtime]
+statement: >
+  USAGE COMP-5 items are native binary. Unlike USAGE COMP, they can
+  contain values up to the capacity of the native representation (2, 4,
+  or 8 bytes) rather than the value implied by the number of 9s in the
+  PICTURE. When numeric data is moved or stored into a COMP-5 item,
+  truncation occurs at the binary field size rather than at the COBOL
+  PICTURE size limit. When a COMP-5 item is referenced, the full binary
+  field size is used. Signed PIC S9(1) through S9(4) is a 2-byte halfword
+  ranging -32768 through +32767; S9(5) through S9(9) a 4-byte fullword;
+  S9(10) through S9(18) an 8-byte doubleword. Scaling in the PICTURE
+  (for example PIC S99V99 COMP-5) scales those capacities. Regardless of
+  TRUNC, COMP-5 behaves like binary data compiled with TRUNC(BIN).
+  TRUNC(BIN) causes USAGE BINARY, COMP, and COMP-4 to be handled as if
+  they were USAGE COMP-5.
+sources:
+  - id: ibm-cobol-zos-64-numeric-formats
+    locator: Native binary (COMP-5) items
+    quotes:
+      - "However, unlike USAGE COMP items, they can contain values of magnitude up to the capacity of the native binary representation (2, 4, or 8 bytes) rather than being limited to the value implied by the number of 9s in the PICTURE clause."
+      - "When you move or store numeric data into a COMP-5 item, truncation occurs at the binary field size rather than at the COBOL PICTURE size limit."
+      - "Regardless of the setting of the TRUNC compiler option, COMP-5 data items behave like binary data does in programs compiled with TRUNC(BIN)."
+    paraphrase: false
+    role: primary
+  - id: ibm-cobol-zos-64-computational-items
+    locator: COMPUTATIONAL-5 or COMP-5 (native binary)
+    quotes:
+      - "When numeric data is moved or stored into a COMP-5 item, truncation occurs at the binary field size rather than at the COBOL picture size limit."
+      - "The TRUNC(BIN) compiler option causes all binary data items (USAGE BINARY, COMP, COMP-4) to be handled as if they were declared USAGE COMP-5."
+    paraphrase: false
+    role: secondary
+caveats:
+  - When a USAGE COMP-5 binary sender is involved in an operation with a receiver that is not numeric, the sender is truncated to the number of digits in its PICTURE clause.
+created: "2026-09-01"
+updated: "2026-09-01"
+related: [usage-binary-comp-comp4-synonyms, trunc-std-picture-digits, trunc-bin-treats-binary-as-comp5]

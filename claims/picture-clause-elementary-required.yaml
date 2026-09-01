@@ -1,0 +1,29 @@
+id: picture-clause-elementary-required
+title: PICTURE is required on elementary items except a short exclusion list
+kind: operational
+status: proposed
+confidence: high
+topics: [syntax, data]
+statement: >
+  In Enterprise COBOL for z/OS, the PICTURE clause specifies the general
+  characteristics and editing requirements of an elementary item. It must
+  be specified for every elementary item except index data items, the
+  subject of the RENAMES clause, items described with USAGE POINTER,
+  FUNCTION-POINTER, PROCEDURE-POINTER, or OBJECT REFERENCE, and internal
+  floating-point data items. In those excluded cases the PICTURE clause
+  is prohibited. The PICTURE clause can be specified only at the
+  elementary level. PIC is an abbreviation for PICTURE.
+sources:
+  - id: ibm-cobol-zos-64-picture-clause
+    locator: PICTURE clause
+    quotes:
+      - "The PICTURE clause specifies the general characteristics and editing requirements of an elementary item."
+      - "The PICTURE clause must be specified for every elementary item except the following ones: Index data items; The subject of the RENAMES clause; Items described with USAGE POINTER, USAGE FUNCTION-POINTER, USAGE PROCEDURE-POINTER, or USAGE OBJECT REFERENCE; Internal floating-point data items. In these cases, use of the PICTURE clause is prohibited."
+      - "The PICTURE clause can be specified only at the elementary level. PIC is an abbreviation for PICTURE and has the same meaning."
+    paraphrase: false
+    role: primary
+caveats:
+  - Vendor Language Reference for Enterprise COBOL for z/OS 6.4; other IBM COBOL products may differ.
+created: "2026-09-01"
+updated: "2026-09-01"
+related: [picture-character-string-max-50, picture-numeric-symbols-9-p-s-v]

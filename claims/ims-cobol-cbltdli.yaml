@@ -1,0 +1,23 @@
+id: ims-cobol-cbltdli
+title: IMS COBOL programs issue DL/I through CALL CBLTDLI
+kind: operational
+status: proposed
+confidence: medium
+topics: [ims]
+statement: >
+  IMS V9 Application Programming for COBOL documents the language interface
+  as CALL CBLTDLI USING a function code and PCB (I/O PCB or alternate PCB),
+  with an AIBTDLI form that uses an AIB instead. This is the documented COBOL
+  calling convention in that manual, not a shop convention.
+sources:
+  - id: ibm-ims-v9-tm-apg
+    role: primary
+    locator: "Chapter 2. Application Programming for COBOL / Format"
+    paraphrase: false
+    quotes:
+      - "This section contains the format, parameters, and DL/I call sample formats for IMS application programs in COBOL."
+      - "CALL 'CBLTDLI' USING function"
+caveats:
+  - Opened PDF is IMS Version 9. Later IMS still uses CBLTDLI/AIBTDLI; option lists may have grown.
+created: "2026-09-01"
+updated: "2026-09-01"

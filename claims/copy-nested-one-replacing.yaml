@@ -1,0 +1,32 @@
+id: copy-nested-one-replacing
+title: A nested COPY chain may contain only one COPY REPLACING
+kind: operational
+status: proposed
+confidence: high
+topics: [syntax]
+statement: >
+  COPY statements can be nested. Any COPY statement in a chain of nested
+  COPY statements can have the REPLACING phrase, as long as there is
+  only one COPY statement in the chain that includes REPLACING. Only one
+  COPY REPLACING statement is allowed in a nested COPY chain. A second
+  COPY REPLACING in the same nested chain is a severe-level compiler
+  error (RC=12) and produces IGYLI0078-S; the second COPY statement is
+  discarded.
+sources:
+  - id: ibm-cobol-zos-64-copy-statement
+    locator: nested COPY
+    quotes:
+      - "COPY statements can be nested, and any COPY statement in a chain of nested COPY statements can have the REPLACING phrase, as long as there is only one COPY statement in the chain that includes the REPLACING phrase."
+    paraphrase: false
+    role: primary
+  - id: ibm-cobol-zos-64-copy-replacing-rules
+    locator: Comparison and replacement rules
+    quotes:
+      - "Only one COPY REPLACING statement is allowed in a nested COPY chain."
+      - "The addition of a second COPY REPLACING statement in the same nested COPY chain will result in a severe-level compiler error (RC=12)"
+      - "IGYLI0078-S   A second \"COPY\" statement with \"REPLACING\" phrase was found within a nested \"COPY\". The second \"COPY\" statement was discarded."
+    paraphrase: false
+    role: secondary
+created: "2026-09-01"
+updated: "2026-09-01"
+related: [copy-replaces-statement-with-library-text]

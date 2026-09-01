@@ -1,0 +1,32 @@
+id: copy-replaces-statement-with-library-text
+title: COPY replaces itself, from COPY through the period, with library text
+kind: operational
+status: proposed
+confidence: high
+topics: [syntax]
+statement: >
+  Compilation of source containing COPY statements is logically
+  equivalent to processing all COPY statements before processing the
+  resulting source text. Processing a COPY statement copies the library
+  text associated with text-name into the compilation unit, logically
+  replacing the entire COPY statement, beginning with the word COPY and
+  ending with the period, inclusive. When REPLACING is not specified,
+  the library text is copied unchanged. When REPLACING is specified,
+  each properly matched occurrence of operand-1 or partial-word-1 in
+  the library text is replaced by the associated operand-2 or
+  partial-word-2. Each COPY statement must be preceded by a space and
+  ended with a separator period. A COPY statement can appear anywhere
+  a character string or a separator can appear.
+sources:
+  - id: ibm-cobol-zos-64-copy-statement
+    locator: COPY statement
+    quotes:
+      - "Compilation of the source code containing COPY statements is logically equivalent to processing all COPY statements before processing the resulting source text."
+      - "The effect of processing a COPY statement is that the library text associated with text-name is copied into the compilation unit, logically replacing the entire COPY statement, beginning with the word COPY and ending with the period, inclusive."
+      - "When the REPLACING phrase is not specified, the library text is copied unchanged."
+      - "When the REPLACING phrase is specified, the library text is copied, and each properly matched occurrence of operand-1 or partial-word-1 within the library text is replaced by the associated operand-2 or partial-word-2."
+    paraphrase: false
+    role: primary
+created: "2026-09-01"
+updated: "2026-09-01"
+related: [copy-nested-one-replacing]

@@ -1,0 +1,40 @@
+id: evaluate-shorthand-nested-if
+title: EVALUATE is a shorthand for a series of nested IF statements
+kind: operational
+status: proposed
+confidence: high
+topics: [syntax]
+statement: >
+  The EVALUATE statement provides a shorthand notation for a series of
+  nested IF statements. It can evaluate multiple conditions; subsequent
+  action depends on the results. Operands before WHEN are selection
+  subjects (collectively a set of selection subjects). Operands in WHEN
+  are selection objects. ALSO separates subjects within a set and
+  objects within a set. Selection subjects can be identifiers, literals,
+  conditional expressions, or TRUE or FALSE. Selection objects can be
+  identifiers, literals, conditional or arithmetic expressions, TRUE,
+  FALSE, or ANY. WHEN OTHER must come last. Execution ends when the
+  statements associated with the selected WHEN phrase are performed.
+sources:
+  - id: ibm-cobol-zos-64-evaluate-statement
+    locator: EVALUATE statement
+    quotes:
+      - "The EVALUATE statement provides a shorthand notation for a series of nested IF statements."
+      - "The EVALUATE statement can evaluate multiple conditions."
+      - "ALSO Separates selection subjects within a set of selection subjects; separates selection objects within a set of selection objects."
+    paraphrase: false
+    role: primary
+  - id: ibm-cobol-zos-64-using-evaluate
+    locator: Using the EVALUATE statement
+    quotes:
+      - "You can use the EVALUATE statement instead of a series of nested IF statements to test several conditions and specify a different action for each."
+      - "Selection subjects can be identifiers, literals, conditional expressions, or the word TRUE or FALSE."
+      - "Selection objects can be identifiers, literals, conditional or arithmetic expressions, or the word TRUE, FALSE, or ANY."
+      - "An exception is the WHEN OTHER phrase, which must come last."
+    paraphrase: false
+    role: secondary
+caveats:
+  - Do not confuse the EVALUATE statement with the >>EVALUATE compiler directive, which chooses source lines at compile time.
+created: "2026-09-01"
+updated: "2026-09-01"
+related: [level-88-condition-name-value]

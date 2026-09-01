@@ -1,0 +1,42 @@
+id: xml-parse-to-processing-procedure
+title: XML PARSE passes each piece of an XML document to a processing procedure
+kind: operational
+status: proposed
+confidence: high
+topics: [syntax, runtime]
+statement: >
+  The XML PARSE statement parses an XML document into its individual
+  pieces and passes each piece, one at a time, to a user-written
+  processing procedure. identifier-1 must be an elementary national
+  item, a national group, an elementary alphanumeric item, or an
+  alphanumeric group, and contains the XML document character stream.
+  XML PARSE is the language interface to either of two XML parsers;
+  the XMLPARSE compiler option selects the parser. XMLPARSE(XMLSS)
+  selects the z/OS XML System Services parser. ENCODING, VALIDATING,
+  and RETURNING NATIONAL of XML PARSE can be used only if
+  XMLPARSE(XMLSS) is in effect. COBOL programs that contain XML PARSE
+  must be link-edited with AMODE 31. END-XML delimits the scope of
+  XML GENERATE or XML PARSE.
+sources:
+  - id: ibm-cobol-zos-64-xml-parse
+    locator: XML PARSE statement
+    quotes:
+      - "The XML PARSE statement parses an XML document into its individual pieces and passes each piece, one at a time, to a user-written processing procedure."
+      - "identifier-1 must be an elementary data item of category national, a national group, an elementary data item of category alphanumeric, or an alphanumeric group item."
+      - "This explicit scope terminator delimits the scope of XML GENERATE or XML PARSE statements."
+    paraphrase: false
+    role: primary
+  - id: ibm-cobol-zos-64-processing-xml
+    locator: Processing XML input
+    quotes:
+      - "The XML PARSE statement is the COBOL language interface to either of two high-speed XML parsers."
+      - "XMLPARSE(XMLSS) selects the z/OS XML System Services parser."
+      - "You can use the ENCODING, VALIDATING, and RETURNING NATIONAL phrases of the XML PARSE statement only if XMLPARSE(XMLSS) is in effect."
+      - "COBOL programs that contain the XML PARSE statement must be link-edited with AMODE 31."
+    paraphrase: false
+    role: secondary
+caveats:
+  - LP(64) programs cannot contain XML GENERATE or XML PARSE statements.
+created: "2026-09-01"
+updated: "2026-09-01"
+related: [json-generate-from-cobol-data, lp-option-amode-31-or-64]

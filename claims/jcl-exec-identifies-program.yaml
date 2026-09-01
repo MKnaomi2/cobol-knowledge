@@ -1,0 +1,26 @@
+id: jcl-exec-identifies-program
+title: A JCL EXEC statement starts a step and names the program or procedure
+kind: operational
+status: proposed
+confidence: high
+topics: [jcl, zos]
+statement: >
+  In z/OS MVS JCL, the EXEC (execute) statement identifies the program or
+  cataloged or in-stream procedure that the job step is to execute and tells
+  the system how to process the step. It marks the beginning of each step in
+  a job or a procedure. A job can have a maximum of 255 job steps, including
+  steps inside procedures the EXEC statements call. An EXEC statement is
+  required for each job step.
+sources:
+  - id: ibm-zos-v1r4-jcl-reference
+    role: primary
+    locator: "Chapter 16. EXEC Statement Purpose"
+    paraphrase: false
+    quotes:
+      - "Use the EXEC (execute) statement to identify the program or cataloged or in-stream procedure that this job step is to execute and to tell the system how to process the job step."
+      - "The EXEC statement marks the beginning of each step in a job or a procedure."
+      - "A job can have a maximum of 255 job steps. This maximum includes all steps in any procedures the EXEC statements call."
+      - "An EXEC statement is required for each job step."
+created: "2026-09-01"
+updated: "2026-09-01"
+related: [jcl-dd-describes-dataset]

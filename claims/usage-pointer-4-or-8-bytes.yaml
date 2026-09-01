@@ -1,0 +1,31 @@
+id: usage-pointer-4-or-8-bytes
+title: USAGE POINTER is 4 bytes under LP(32) and 8 bytes under LP(64)
+kind: operational
+status: proposed
+confidence: high
+topics: [data, runtime, dialect]
+statement: >
+  A data item defined with USAGE IS POINTER is a pointer data item or
+  data-pointer. It is a 4-byte elementary item if LP(32) is in effect,
+  or an 8-byte elementary item if LP(64) is in effect. Pointer items can
+  be compared for equality or moved to other pointer items. A pointer
+  data item can be used only in ALLOCATE, FREE, SET (format 5 only), a
+  relation condition, and the USING phrase of CALL, ENTRY, or the
+  PROCEDURE DIVISION header. When LP(32) is in effect, USAGE POINTER
+  and USAGE POINTER-32 are synonyms. A POINTER can be SET to a
+  POINTER-32 and vice versa. A pointer data item can be the subject or
+  object of a REDEFINES clause.
+sources:
+  - id: ibm-cobol-zos-64-pointer-phrase
+    locator: POINTER phrase
+    quotes:
+      - "A data item defined with USAGE IS POINTER is a pointer data item or data-pointer."
+      - "A pointer data item is a 4-byte elementary item or an 8-byte elementary item depending on whether the LP(32) or LP(64) is in effect."
+      - "If LP(32) is in effect, 4 bytes are allocated for the item; otherwise, 8 bytes are allocated for the item."
+      - "When the LP(32) compiler option is in effect, USAGE POINTER and USAGE POINTER-32 are synonyms."
+      - "A pointer data item can be the subject or object of a REDEFINES clause."
+    paraphrase: false
+    role: primary
+created: "2026-09-01"
+updated: "2026-09-01"
+related: [lp-option-amode-31-or-64, redefines-same-computer-storage]
